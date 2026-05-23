@@ -44,5 +44,7 @@ ${icp.trim()}
 YOUR PRODUCT PITCH (for context — do not pitch in the opener):
 ${pitch.trim()}
 
+If the anchor post does not contain enough specific detail to make a grounded observation, write a simpler honest sentence about what the prospect did. Never invent details not present in the post text. Fabricating specifics is worse than being plain.
+
 Write the opener now. One sentence. Reference a specific detail from the anchor post.`;
 }
