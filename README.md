@@ -90,7 +90,7 @@ and the same data written to `output.json`.
 
 To change provider or model, set `LLM_BASE_URL` and `LLM_MODEL` in `.env`.
 Any OpenAI-compatible `/chat/completions` endpoint works (Cerebras, Groq,
-OpenRouter, etc). Default is Cerebras `llama-3.3-70b`.
+OpenRouter, etc). Default is Cerebras `llama3.1-8b`.
 
 ## The two data sources, and why
 

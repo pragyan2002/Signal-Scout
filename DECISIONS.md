@@ -78,9 +78,9 @@ Considered, rejected:
 
 ## Provider-agnostic chat client, default to Cerebras
 
-LLM client now generic OpenAI-compatible `/chat/completions` wrapper parameterized by `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`. Default `https://api.cerebras.ai/v1` + `llama-3.3-70b`. Legacy `OPENROUTER_*` env vars still honored.
+LLM client now generic OpenAI-compatible `/chat/completions` wrapper parameterized by `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`. Default `https://api.cerebras.ai/v1` + `llama3.1-8b`. Legacy `OPENROUTER_*` env vars still honored.
 
-OpenRouter free tier (Nemotron) hit daily request cap mid-development. Cerebras free tier = 1M tokens/day with no card, 30 RPM, 8k context — well above what per-post extraction + per-prospect snippet needs. Llama 3.3 70B comparable instruction-following + JSON quality vs Nemotron Nano 30B, faster on Cerebras LPU hardware.
+OpenRouter free tier (Nemotron) hit daily request cap mid-development. Cerebras free tier = 1M tokens/day with no card, 30 RPM, 8k context — well above what per-post extraction + per-prospect snippet needs. Llama 3.1 8B fast + cheap on Cerebras LPU hardware, adequate for structured JSON extraction and short snippet generation at POC quality bar. Bump to `llama-3.3-70b` via `LLM_MODEL` if output gets templated.
 
 Generalizing client cost ~10 lines: dropped OpenRouter-specific `HTTP-Referer` / `X-Title` headers (decorative on OpenRouter, ignored elsewhere), threaded `baseUrl` through `createChatClient`. Renamed `createOpenRouterClient` → `createChatClient`, file `openrouter.ts` → `client.ts`. Was already the design intent ("swap models by changing a string") — now actually true across providers, not just within OpenRouter's catalog.
 

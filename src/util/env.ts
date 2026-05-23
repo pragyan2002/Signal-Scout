@@ -7,7 +7,7 @@ export interface AppEnv {
 }
 
 const DEFAULT_BASE_URL = 'https://api.cerebras.ai/v1';
-const DEFAULT_MODEL = 'llama-3.3-70b';
+const DEFAULT_MODEL = 'llama3.1-8b';
 
 export function loadEnv(): AppEnv {
   const apiKey =
