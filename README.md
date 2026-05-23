@@ -116,7 +116,7 @@ manually via the Actions tab (`workflow_dispatch`) or let the schedule fire.
 **Top signal:** `tool_complaint` · **Tone:** `frustrated`
 
 **Generated opener:**
-> Your post about outbound tools assuming you have an SDR team caught my attention — Signal Scout is built for exactly the "me and a Postgres connection" constraint: it monitors what your prospects post publicly, extracts the signal worth acting on, and writes this line.
+> Getting ten paying customers from a single HN comment and then hitting a wall because every outbound tool assumes a team you don't have is a specific kind of problem most tools aren't built to see.
 
 ![Terminal output showing marcus_builds anchor post and generated snippet](Screenshot%202026-05-23%20181442.png)
 
