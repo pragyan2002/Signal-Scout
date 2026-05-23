@@ -100,6 +100,25 @@ back to the repo. Set the `LLM_API_KEY` repo secret to enable it, or trigger it
 manually via the Actions tab (`workflow_dispatch`). The git history of `runs/`
 is the run history — there is still no database.
 
+## Example output
+
+**Prospect:** `@marcus_builds` · Twitter
+
+**Anchor post** (2026-05-23):
+> Trying to figure out how to do outbound now that we have something to sell.
+> Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.
+
+**Top signal:** `tool_complaint` · **Tone:** `frustrated`
+
+**Generated opener:**
+> Your post about outbound tools assuming you have an SDR team caught my attention — Signal Scout is built for exactly the "me and a Postgres connection" constraint: it monitors what your prospects post publicly, extracts the signal worth acting on, and writes this line.
+
+![Terminal output showing marcus_builds anchor post and generated snippet](Screenshot%202026-05-23%20181442.png)
+
+---
+
+> **Note on snippet quality:** The opener above is handcrafted to show the ceiling of what grounded, signal-driven personalization looks like. Live output quality scales directly with model capability. The pipeline logic is model-agnostic — swap `LLM_MODEL` in `.env` for a stronger model and the snippets sharpen accordingly. The fixture above is a useful benchmark: if your chosen model can produce an opener that specific and that grounded, it's working.
+
 ## The two data sources, and why
 
 Real outbound tools need real sources. This POC ships two implementations of
