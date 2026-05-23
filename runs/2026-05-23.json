@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T08:20:08.857Z",
+  "generatedAt": "2026-05-23T09:04:50.533Z",
   "results": [
     {
       "prospect": {
@@ -20,8 +20,8 @@
           "outbound sales",
           "fundraising",
           "seed round",
-          "gtm",
-          "saas"
+          "venture capital",
+          "gtm"
         ],
         "dominantTone": "excited",
         "anchor": {
@@ -38,13 +38,14 @@
             ],
             "topics": [
               "fundraising",
-              "seed round"
+              "seed round",
+              "venture capital"
             ],
             "tone": "excited"
           }
         }
       },
-      "snippet": "Congratulations on closing your seed round, a $4.2M milestone that marks the start of a new chapter in your GTM journey.",
+      "snippet": "Your seed round with Initialized and other operators suggests you're now in a position to invest in the actual work, not just raise money for it.",
       "error": null
     },
     {
@@ -66,8 +67,8 @@
           "outbound sales",
           "devops",
           "alert fatigue",
-          "hacker news",
-          "pipeline strategy"
+          "public beta",
+          "hacker news"
         ],
         "dominantTone": "celebratory",
         "anchor": {
@@ -85,13 +86,14 @@
             ],
             "topics": [
               "outbound sales",
-              "sales tools"
+              "sales development",
+              "postgres"
             ],
             "tone": "frustrated"
           }
         }
       },
-      "snippet": "Assuming you have a Postgres connection is a clever shortcut, but I'd love to learn how you're actually doing outbound with just that and your own efforts.",
+      "snippet": "You're trying to do outbound with just a Postgres connection and yourself, which is an honest approach that most people just talk about.",
       "error": null
     },
     {
@@ -113,7 +115,7 @@
           "tooling",
           "customer_acquisition",
           "infrastructure",
-          "engineering"
+          "team_growth"
         ],
         "dominantTone": "frustrated",
         "anchor": {
@@ -137,7 +139,7 @@
           }
         }
       },
-      "snippet": "Equity-heavy founding roles like yours are notoriously hard to fill, yet you're looking for a specific fit – a YC alum with direct outbound experience at a technical product company.",
+      "snippet": "Posting about a founding AE role with equity-heavy compensation suggests you're ready to invest in the right person to own your entire pipeline, not just hire more bodies.",
       "error": null
     },
     {
@@ -158,7 +160,7 @@
         "topTopics": [
           "finance",
           "productivity",
-          "midmarket",
+          "mid-market",
           "outbound sales",
           "growing team"
         ],
@@ -184,7 +186,7 @@
           }
         }
       },
-      "snippet": "Your Series A close and team doubling are a testament to your strong execution so far, but I'm curious about the challenges that come with scaling GTM efforts.",
+      "snippet": "Your willingness to introduce us to a Head of Sales suggests you understand the GTM hire is the last puzzle piece for a scalable motion.",
       "error": null
     },
     {
@@ -229,7 +231,7 @@
           }
         }
       },
-      "snippet": "Your transition from a 0.4% reply rate to 6.8% in just six weeks suggests that prospect research is a critical component of a successful outbound strategy, but can be time-consuming to execute manually.",
+      "snippet": "Rebuilding your entire outbound process in six weeks to hit 6.8% reply rate is the kind of thing most teams talk about and never actually do.",
       "error": null
     },
     {
@@ -250,11 +252,11 @@
         "topTopics": [
           "devops",
           "travel",
-          "productivity",
           "npm",
-          "github actions"
+          "github actions",
+          "security"
         ],
-        "dominantTone": "neutral",
+        "dominantTone": "excited",
         "anchor": {
           "post": {
             "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mlyqhtb2oc2l",
@@ -275,7 +277,7 @@
           }
         }
       },
-      "snippet": "Your observation about everything taking longer to do resonates with many founders, and I'm curious to hear more about how you're tackling this challenge.",
+      "snippet": "Adding verification criteria to your specs is a great step, but it's clear you're now spending more time on optimization than actual dev work.",
       "error": null
     },
     {
