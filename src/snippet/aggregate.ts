@@ -42,7 +42,7 @@ function dominantTone(tones: Tone[]): Tone {
   return topN(tones, 1, (t) => t)[0]!;
 }
 
-function scorePost(p: ExtractedPost): number {
+function scorePost(p: ExtractedPost, nowMs: number): number {
   if (isHiringBroadcast(p)) return 5;
   const best = p.signals.intentSignals.reduce(
     (m, s) => Math.max(m, SIGNAL_PRIORITY[s] ?? 0),
@@ -50,7 +50,7 @@ function scorePost(p: ExtractedPost): number {
   );
   const recencyBoost = Math.max(
     0,
-    14 - (Date.now() - Date.parse(p.post.createdAt)) / (24 * 60 * 60 * 1000),
+    14 - (nowMs - Date.parse(p.post.createdAt)) / (24 * 60 * 60 * 1000),
   );
   return best + recencyBoost;
 }
@@ -72,7 +72,12 @@ export function aggregate(extracted: ExtractedPost[]): AggregatedSignals | null 
     (t) => t.toLowerCase(),
   );
   const tone = dominantTone(pool.map((e) => e.signals.tone));
-  const anchor = [...pool].sort((a, b) => scorePost(b) - scorePost(a))[0]!;
+  const nowMs = Date.now();
+  const anchor = [...pool].sort(
+    (a, b) =>
+      scorePost(b, nowMs) - scorePost(a, nowMs) ||
+      Date.parse(b.post.createdAt) - Date.parse(a.post.createdAt),
+  )[0]!;
 
   return {
     topSignals,

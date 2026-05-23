@@ -15,8 +15,8 @@ Rules — non-negotiable:
 6. Do not pitch the product in this line.
 7. Output the sentence ONLY — no quotes, no preamble, no explanation.
 
-Bad: "Your transition from 0.4% to 6.8% reply rate suggests personalization is critical."
-Good: "Rebuilding your entire outbound process in six weeks to hit 6.8% is the kind of thing most teams talk about and never actually do."`;
+Bad: "Your post about migrating to a new database suggests you care about performance."
+Good: "Cutting deploy time from 40 minutes to 4 after inheriting that pipeline isn't an optimization — it's a different job."`;
 
 export function buildSnippetUserPrompt(args: {
   prospect: Prospect;
