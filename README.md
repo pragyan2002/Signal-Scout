@@ -117,7 +117,21 @@ is the run history — there is still no database.
 
 ---
 
-> **Note on snippet quality:** The opener above is handcrafted to show the ceiling of what grounded, signal-driven personalization looks like. Live output quality scales directly with model capability. The pipeline logic is model-agnostic — swap `LLM_MODEL` in `.env` for a stronger model and the snippets sharpen accordingly. The fixture above is a useful benchmark: if your chosen model can produce an opener that specific and that grounded, it's working.
+**Prospect:** `@pfrazee.com` · Bluesky
+
+**Anchor post:**
+> Used Claude voice for the first time. It's just Jarvis.
+
+**Top signal:** `tool_complaint` · **Tone:** `excited`
+
+**Generated opener:**
+> You called Claude voice "just Jarvis" on first use — which means you're already past the "whoa it talks" reaction and thinking about what AI-native workflows look like before most people have touched the thing.
+
+---
+
+> **Note on snippet quality:** The openers above are handcrafted to show the ceiling of what grounded, signal-driven personalization looks like. Live output quality scales directly with model capability. The pipeline logic is model-agnostic — swap `LLM_MODEL` in `.env` for a stronger model and the snippets sharpen accordingly. The fixture above is a useful benchmark: if your chosen model can produce an opener that specific and that grounded, it's working.
+>
+> The two examples above are handcrafted. Current live output with llama-3.3-70b produces the correct anchor and signals but flatter openers — the gap is the prompt engineering problem this project is designed to expose.
 
 ## The two data sources, and why
 
