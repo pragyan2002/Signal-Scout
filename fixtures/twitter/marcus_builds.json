@@ -1,0 +1,23 @@
+{
+  "handle": "marcus_builds",
+  "posts": [
+    {
+      "id": "1789022345678901234",
+      "url": "https://twitter.com/marcus_builds/status/1789022345678901234",
+      "text": "Shipped our public beta this morning. Six months of building, three pivots, two near-deaths, one live product. Link in bio. If you're a DevOps engineer drowning in alert fatigue, this is for you.",
+      "createdAt": "2026-05-20T14:00:00Z"
+    },
+    {
+      "id": "1789022345678901235",
+      "url": "https://twitter.com/marcus_builds/status/1789022345678901235",
+      "text": "First ten paying customers in 48 hours. None of them were on the waitlist. All of them came through a single Hacker News comment. Pipeline strategy is fake until it works.",
+      "createdAt": "2026-05-22T09:14:00Z"
+    },
+    {
+      "id": "1789022345678901236",
+      "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
+      "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
+      "createdAt": "2026-05-23T11:48:00Z"
+    }
+  ]
+}

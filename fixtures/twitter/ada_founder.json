@@ -1,0 +1,29 @@
+{
+  "handle": "ada_founder",
+  "posts": [
+    {
+      "id": "1789012345678901234",
+      "url": "https://twitter.com/ada_founder/status/1789012345678901234",
+      "text": "We just closed our seed round. $4.2M led by Initialized with participation from a bunch of operators we've been learning from for years. Wild day. Now the actual work starts.",
+      "createdAt": "2026-05-19T15:42:00Z"
+    },
+    {
+      "id": "1789012345678901235",
+      "url": "https://twitter.com/ada_founder/status/1789012345678901235",
+      "text": "Hiring our first GTM hire. Looking for someone who's done outbound at a seed-stage B2B SaaS startup before. If you've sent 1000+ cold emails and lived to tell the tale, DM me.",
+      "createdAt": "2026-05-21T17:10:00Z"
+    },
+    {
+      "id": "1789012345678901236",
+      "url": "https://twitter.com/ada_founder/status/1789012345678901236",
+      "text": "Spent the morning going through our outbound tool. Honestly cannot believe how generic the AI suggestions are. 'I noticed you're a CEO!' Yes. So is half my list. This is not personalization.",
+      "createdAt": "2026-05-22T13:30:00Z"
+    },
+    {
+      "id": "1789012345678901237",
+      "url": "https://twitter.com/ada_founder/status/1789012345678901237",
+      "text": "Reading 'The Mom Test' for the third time. Different book at every stage.",
+      "createdAt": "2026-05-22T22:05:00Z"
+    }
+  ]
+}

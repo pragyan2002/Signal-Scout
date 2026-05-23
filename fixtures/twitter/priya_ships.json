@@ -1,0 +1,23 @@
+{
+  "handle": "priya_ships",
+  "posts": [
+    {
+      "id": "1789032345678901234",
+      "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+      "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+      "createdAt": "2026-05-15T18:22:00Z"
+    },
+    {
+      "id": "1789032345678901235",
+      "url": "https://twitter.com/priya_ships/status/1789032345678901235",
+      "text": "Our infra team grew from 2 to 5 this quarter. The bottleneck is no longer engineering. The bottleneck is now finding customers who actually need what we built.",
+      "createdAt": "2026-05-18T12:01:00Z"
+    },
+    {
+      "id": "1789032345678901236",
+      "url": "https://twitter.com/priya_ships/status/1789032345678901236",
+      "text": "Looking for a founding AE. YC alum or equivalent. Has done outbound at a technical product company. Comfortable owning the entire pipeline. Equity-heavy. DMs open.",
+      "createdAt": "2026-05-22T16:45:00Z"
+    }
+  ]
+}
