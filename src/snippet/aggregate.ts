@@ -7,14 +7,21 @@ import type {
 
 const SIGNAL_PRIORITY: Record<IntentSignal, number> = {
   fundraising: 100,
-  hiring: 90,
   launching: 85,
   tool_complaint: 80,
+  hiring: 70,
   celebrating_win: 60,
   seeking_advice: 50,
   sharing_learning: 30,
   none: 0,
 };
+
+const BROADCAST_HIRE_RE =
+  /know anyone|refer(?:ral)?|(?:^|\s)intro(?:\s|$)|tag someone|spread the word|share this|dm me|reach out if you know/i;
+
+function isHiringBroadcast(p: ExtractedPost): boolean {
+  return p.signals.intentSignals.includes('hiring') && BROADCAST_HIRE_RE.test(p.post.text);
+}
 
 function topN<T>(items: T[], n: number, keyFn: (t: T) => string): T[] {
   const counts = new Map<string, { item: T; count: number; firstIdx: number }>();
@@ -36,6 +43,7 @@ function dominantTone(tones: Tone[]): Tone {
 }
 
 function scorePost(p: ExtractedPost): number {
+  if (isHiringBroadcast(p)) return 5;
   const best = p.signals.intentSignals.reduce(
     (m, s) => Math.max(m, SIGNAL_PRIORITY[s] ?? 0),
     0,

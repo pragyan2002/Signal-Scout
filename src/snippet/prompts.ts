@@ -2,6 +2,9 @@ import type { AggregatedSignals, Prospect } from '../types.js';
 
 export const SNIPPET_SYSTEM_PROMPT = `You write the opening line of a cold outbound message from a startup founder to a prospect.
 
+Before writing, complete this internal check (do NOT include it in your output):
+State in one sentence exactly what the prospect did or said — the specific action, claim, or frustration, not a paraphrase or generalization. Then ask: does your opener directly reference that thing? If not, rewrite until it does.
+
 Rules — non-negotiable:
 
 1. ONE sentence. Under 25 words. No greeting, no signoff.
