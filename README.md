@@ -76,6 +76,7 @@ npm install
 cp .env.example .env
 # paste your Cerebras key into .env
 npm start
+npm run typecheck   # optional: type-check without running
 ```
 
 You will see a terminal table of prospects with their signals and snippets,
@@ -95,10 +96,14 @@ OpenRouter, etc). Default is Cerebras `llama3.1-8b`.
 ### Scheduled runs
 
 [.github/workflows/run.yml](.github/workflows/run.yml) runs the pipeline daily
-on GitHub Actions, writes the result to `runs/YYYY-MM-DD.json`, and commits it
-back to the repo. Set the `LLM_API_KEY` repo secret to enable it, or trigger it
-manually via the Actions tab (`workflow_dispatch`). The git history of `runs/`
-is the run history — there is still no database.
+at 13:00 UTC on GitHub Actions, writes the result to `runs/YYYY-MM-DD.json`,
+and commits it back to the repo. The git history of `runs/` is the run history
+— there is still no database.
+
+The workflow pins `LLM_BASE_URL` and `LLM_MODEL` directly (Groq,
+`llama-3.3-70b-versatile`) so the only repo secret you need to set is
+`LLM_API_KEY` — and that means a **Groq** API key, not Cerebras. Trigger
+manually via the Actions tab (`workflow_dispatch`) or let the schedule fire.
 
 ## Example output
 
@@ -129,7 +134,7 @@ is the run history — there is still no database.
 
 ---
 
-> **Note on snippet quality:** The openers above are handcrafted to show the ceiling of what grounded, signal-driven personalization looks like. Live output quality scales directly with model capability. The pipeline logic is model-agnostic — swap `LLM_MODEL` in `.env` for a stronger model and the snippets sharpen accordingly. The fixture above is a useful benchmark: if your chosen model can produce an opener that specific and that grounded, it's working.
+> **Note on snippet quality:** The openers above are handcrafted to show the ceiling of what grounded, signal-driven personalization looks like. Live output quality scales directly with model capability. The pipeline logic is model-agnostic — swap `LLM_MODEL` in `.env` for a stronger model and the snippets sharpen accordingly. These examples are a useful benchmark: if your chosen model can produce an opener that specific and that grounded, it's working.
 >
 > The two examples above are handcrafted. Current live output with llama-3.3-70b produces the correct anchor and signals but flatter openers — the gap is the prompt engineering problem this project is designed to expose.
 
@@ -192,9 +197,13 @@ The short version:
   is no fourth category.
 - **OpenAI-compatible HTTP, not a vendor SDK.** Swap providers (Cerebras,
   Groq, OpenRouter, …) by changing `LLM_BASE_URL` + `LLM_MODEL` in `.env`.
-- **Hiring posts asking for referrals are scored near zero.** The aggregator
-  filters out "know anyone / refer / intro" hiring posts from anchor selection
-  because they reflect network broadcasting, not the prospect's own pain.
+- **Anchor selection uses a scoring formula, not recency alone.** Each post
+  gets a score: signal priority (fundraising=100, tool_complaint=90,
+  launching=85, hiring=70, …) plus a recency boost (decays over 14 days)
+  minus penalties for thin posts (−20 for <100 chars, −50 for <60 chars).
+  Hiring posts that match broadcast patterns ("know anyone", "refer", "intro",
+  etc.) are capped at 5 regardless — they reflect network broadcasting, not
+  the prospect's own pain.
 
 ## Repo layout
 
