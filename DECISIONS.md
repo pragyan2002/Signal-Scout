@@ -104,3 +104,18 @@ Considered, rejected:
 - **`p-throttle` or `bottleneck` library.** Twelve lines avoided by adding a dependency. Throttle here is a single mutex + a timestamp; library would carry features (concurrency, weight) the POC never uses.
 - **Parallel calls with a token-bucket limiter.** Would help on providers with higher RPM. On Cerebras free 5 RPM, max useful concurrency = 1. Adds complexity for zero gain at the binding constraint.
 - **Just retry on 429, no throttle.** Works but wastes a round-trip per call and depends on every retry-after being honest. Pre-throttling means the happy path is the common path.
+
+## Run the pipeline on GitHub Actions, commit output back to the repo
+
+A scheduled workflow at [.github/workflows/run.yml](.github/workflows/run.yml) runs the pipeline daily at 13:00 UTC, renames `output.json` to `runs/YYYY-MM-DD.json`, uploads it as a 30-day artifact, and commits the file back to `main`. `LLM_API_KEY` lives in repo secrets; everything else uses `.env.example` defaults. `workflow_dispatch` enabled for manual triggers.
+
+A 13s/call throttle plus the 5 RPM Cerebras free-tier cap means a 5-prospect run takes ~25 min — too long to want to babysit locally every day. GHA gives us free compute, a scheduler, and a place to put the key that isn't a laptop. And the runs land somewhere persistent without anyone having to remember.
+
+Committing the file back to the repo deliberately turns git history into run history. The "no database" decision earlier in this log argued every file should be input, code, or output — `runs/2026-05-23.json` is just yesterday's output, dated. Diffing two days of `runs/*.json` shows signal drift without a schema migration. The cost is repo bloat over time, but JSON outputs of ~5–10 prospects compress to a few KB each; 365 days = a few MB at the outside.
+
+Considered, rejected:
+
+- **Artifacts only, no commit-back.** Cleaner repo, but 30-day retention and no `git log` of changes. Loses the time-series view that's the main reason to schedule this at all. Workflow uploads an artifact too, as a belt-and-braces backup.
+- **Push outputs to a separate `runs` branch.** Keeps `main` history clean but makes diffing across runs a `git checkout` dance. The volume here is small enough that one branch is fine.
+- **External store (S3, Supabase, a gist).** Another credential, another moving part, another thing to explain in the README. Repo storage is free at this scale.
+- **Per-prospect matrix jobs to parallelize past the 5 RPM cap.** Cerebras free tier limits are org-level, so matrix jobs would just thrash 429s against each other. Real fix is a paid tier or a different provider, not more concurrency.

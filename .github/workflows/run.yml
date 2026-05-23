@@ -1,0 +1,66 @@
+name: run-pipeline
+
+on:
+  schedule:
+    # 13:00 UTC daily (≈ 6am PT / 9am ET). GHA cron is best-effort, expect drift.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: signal-scout-run
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      # Defaults match .env.example. Override here if you change providers.
+      LLM_BASE_URL: https://api.cerebras.ai/v1
+      LLM_MODEL: llama3.1-8b
+      LLM_MIN_INTERVAL_MS: "13000"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run pipeline
+        run: npm start
+
+      - name: Stash run output
+        id: stash
+        run: |
+          date_utc=$(date -u +%Y-%m-%d)
+          mkdir -p runs
+          mv output.json "runs/${date_utc}.json"
+          echo "path=runs/${date_utc}.json" >> "$GITHUB_OUTPUT"
+          echo "date=${date_utc}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: signal-scout-${{ steps.stash.outputs.date }}
+          path: ${{ steps.stash.outputs.path }}
+          retention-days: 30
+
+      - name: Commit run to repo
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add runs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(runs): ${{ steps.stash.outputs.date }}"
+          git push

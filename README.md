@@ -92,6 +92,14 @@ To change provider or model, set `LLM_BASE_URL` and `LLM_MODEL` in `.env`.
 Any OpenAI-compatible `/chat/completions` endpoint works (Cerebras, Groq,
 OpenRouter, etc). Default is Cerebras `llama3.1-8b`.
 
+### Scheduled runs
+
+[.github/workflows/run.yml](.github/workflows/run.yml) runs the pipeline daily
+on GitHub Actions, writes the result to `runs/YYYY-MM-DD.json`, and commits it
+back to the repo. Set the `LLM_API_KEY` repo secret to enable it, or trigger it
+manually via the Actions tab (`workflow_dispatch`). The git history of `runs/`
+is the run history — there is still no database.
+
 ## The two data sources, and why
 
 Real outbound tools need real sources. This POC ships two implementations of
