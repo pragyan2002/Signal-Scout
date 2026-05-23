@@ -119,3 +119,20 @@ Rejected:
 - **Push outputs to separate `runs` branch.** Keeps `main` clean but makes cross-run diffing a `git checkout` dance. Volume small enough that one branch fine.
 - **External store (S3, Supabase, gist).** Another credential, moving part, README explanation. Repo storage free at this scale.
 - **Per-prospect matrix jobs to parallelize past 5 RPM cap.** Cerebras free tier limits org-level, matrix jobs would thrash 429s against each other. Real fix = paid tier or different provider, not more concurrency.
+
+## Tighten snippet generation prompt — specificity and peer tone
+
+Snippet prompt produced corporate openers echoing prospect's words. Specific claim rule too weak — model passed surface check (mentions number/detail) without substance check (claim must only work for this exact post, not similar posts).
+
+Updated `SNIPPET_SYSTEM_PROMPT` in `src/snippet/prompts.ts`:
+
+- Word cap 30 → 25. Forces compression, kills filler faster than any other rule.
+- Explicit rule: don't restate prospect's words. Make own point about what they did or what it means.
+- Banned phrases: "testament to", "resonates with", "marks the start of", "I noticed", "I saw", "impressive", "excited", "love this", "great post".
+- Tone rule rewritten: "smart peer, not salesperson — write like you read the post and had honest reaction, not like you're warming someone up to pitch them."
+- Bad/good example pair added directly in system prompt. Concrete contrast beats description of contrast.
+
+Rejected:
+
+- **Keep 30-word cap.** Under 25 forces compression that eliminates filler faster than any other rule.
+- **Move examples to user prompt.** System prompt always present, cheapest enforcement. User prompt grows with anchor post content.

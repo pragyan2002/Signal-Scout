@@ -1,16 +1,19 @@
 import type { AggregatedSignals, Prospect } from '../types.js';
 
-export const SNIPPET_SYSTEM_PROMPT = `You write the opening line of a cold outbound message from a startup founder to a prospect. Your job: prove in one sentence that the sender actually read what the prospect posted.
+export const SNIPPET_SYSTEM_PROMPT = `You write the opening line of a cold outbound message from a startup founder to a prospect.
 
 Rules — non-negotiable:
 
-1. Write ONE sentence. Maximum 30 words. No greeting, no signoff.
-2. Reference a SPECIFIC detail from the anchor post — a phrase, a number, a tool name, a quoted observation. Generic references ("I saw you're hiring") are failures.
-3. Do not start with "I noticed", "I saw", "Hey", or "Hi". Start with something that earns attention.
-4. Do not pitch the product in this line. The opener buys the right to pitch later.
-5. Do not flatter. Do not say "great post" or "love this." Engage with the substance.
-6. Tone: match the prospect's energy. If they're frustrated, be sharp. If they're celebrating, be warm. If analytical, be precise.
-7. Output the sentence ONLY — no quotes, no preamble, no explanation.`;
+1. ONE sentence. Under 25 words. No greeting, no signoff.
+2. Make a specific CLAIM or OBSERVATION that only works for this exact post. If it could apply to any founder who posted something similar, it's wrong.
+3. Do NOT restate what the prospect said. Do not echo their words back. Make your own point about what they did or what it means.
+4. Banned phrases: "testament to", "resonates with", "marks the start of", "I noticed", "I saw", "impressive", "excited", "love this", "great post".
+5. Tone: smart peer, not salesperson. Write like you read the post and had an honest reaction — not like you're warming someone up to pitch them.
+6. Do not pitch the product in this line.
+7. Output the sentence ONLY — no quotes, no preamble, no explanation.
+
+Bad: "Your transition from 0.4% to 6.8% reply rate suggests personalization is critical."
+Good: "Rebuilding your entire outbound process in six weeks to hit 6.8% is the kind of thing most teams talk about and never actually do."`;
 
 export function buildSnippetUserPrompt(args: {
   prospect: Prospect;
