@@ -1,173 +1,91 @@
 # Decisions
 
-Append-only log of non-trivial choices made while building Signal Scout. Each entry
-is drafted in chat, reviewed, then committed here.
+Append-only log of non-trivial choices made building Signal Scout. Each entry drafted in chat, reviewed, then committed here.
 
 ## Two source adapters: fixtures for Twitter/LinkedIn, live API for Bluesky
 
-We ship two `SignalSource` implementations behind one interface. `MockTwitterSource`
-loads realistic fixture JSON from `fixtures/`, simulating recent Twitter and LinkedIn
-activity. `BlueskySource` makes live HTTP calls to the public AT Protocol endpoint
-`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed` — no auth required,
-no API key, no rate-limit pain at POC volume.
+Ship two `SignalSource` implementations behind one interface. `MockTwitterSource` loads fixture JSON from `fixtures/`, simulating recent Twitter and LinkedIn activity. `BlueskySource` makes live HTTP calls to public AT Protocol endpoint `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed` — no auth, no API key, no rate-limit pain at POC volume.
 
-We did this because the adapter pattern is the whole architectural argument of the
-project, and a pattern with only one implementation is not a pattern, it's a class.
-Having one mocked source and one live source proves the interface holds up against
-a real API response shape, not just data we hand-shaped to fit. The Bluesky adapter
-also gives the demo something visibly alive: when a founder runs `npm start`, real
-posts from real people flow through the pipeline.
+Adapter pattern = whole architectural argument. Pattern with one implementation = class, not pattern. One mocked + one live source proves interface holds against real API response shape, not data hand-shaped to fit. Bluesky adapter also gives demo something visibly alive: founder runs `npm start`, real posts from real people flow through pipeline.
 
-We considered and rejected three alternatives:
+Considered, rejected three alternatives:
 
-- **Twitter/X paid API.** Basic tier is $100/month, overkill for a weekend POC,
-  and the cost signals "I burned money to demo this" rather than "I designed
-  around a constraint."
-- **Nitter or snscrape for Twitter.** Both have been broken or unreliable since
-  Twitter's 2023 API crackdown. A demo that dies the week a public Nitter instance
-  goes down is worse than no live source at all.
-- **Fixtures only, no live source.** Cleanest to ship but weakest signal. A
-  reviewer reading the repo sees one mock implementation and reasonably assumes
-  the "adapter interface" was never tested against reality. Adding Bluesky costs
-  one file and proves the seam works.
+- **Twitter/X paid API.** Basic tier $100/month, overkill for weekend POC. Cost signals "burned money to demo" not "designed around constraint."
+- **Nitter or snscrape for Twitter.** Broken/unreliable since Twitter's 2023 API crackdown. Demo dying when public Nitter instance goes down = worse than no live source.
+- **Fixtures only, no live source.** Cleanest ship, weakest signal. Reviewer sees one mock implementation, assumes "adapter interface" never tested against reality. Bluesky costs one file, proves seam works.
 
 ## OpenRouter with Nemotron Nano Omni 30B (reasoning) free tier for both extraction and snippet generation
 
-Both LLM calls — per-post signal extraction and per-prospect snippet generation —
-route through OpenRouter using `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`.
-One client, one model, zero spend.
+Both LLM calls — per-post signal extraction, per-prospect snippet generation — route through OpenRouter using `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`. One client, one model, zero spend.
 
-We did this because the POC needs to demonstrate that the pipeline produces
-non-generic output, and a reasoning-tuned 30B model gets us there without paying.
-Nemotron Nano Omni's reasoning mode is strong at instruction-following and
-structured JSON output — exactly what both prompts need. Free tier rate limits
-exist but are generous enough for a demo run of 5–10 prospects with ~20 posts
-each.
+POC needs to show pipeline produces non-generic output. Reasoning-tuned 30B model gets us there free. Nemotron Nano Omni reasoning mode strong at instruction-following and structured JSON output — what both prompts need. Free tier rate limits generous enough for demo run of 5–10 prospects with ~20 posts each.
 
-We considered and rejected:
+Considered, rejected:
 
-- **Llama 3.1 8B or Mistral 7B (also free or near-free).** Cheap and fast but
-  noticeably worse at structured JSON extraction and at writing snippets that
-  feel personalized rather than templated. The whole point of the demo is
-  output quality.
-- **Claude Haiku 4.5 or GPT-4o-mini (paid).** Better still, and total cost for
-  a full POC run is under a dollar. Rejected because using a free reasoning
-  model is itself a small signal of taste — "I found a free model that's good
-  enough" reads better in a portfolio piece than "I expensed Anthropic credits."
-- **Direct Anthropic or OpenAI SDK.** Locks the demo to one vendor. OpenRouter
-  lets a reader swap models by changing a string, which is the kind of detail
-  technical founders notice.
+- **Llama 3.1 8B or Mistral 7B (free or near-free).** Cheap, fast, but worse at structured JSON extraction and snippets that feel personalized not templated. Whole point of demo = output quality.
+- **Claude Haiku 4.5 or GPT-4o-mini (paid).** Better still, full POC run under a dollar. Rejected: using free reasoning model = small signal of taste. "Found free model good enough" reads better in portfolio than "expensed Anthropic credits."
+- **Direct Anthropic or OpenAI SDK.** Locks demo to one vendor. OpenRouter lets reader swap models by changing a string — kind of detail technical founders notice.
 
-Fallback documented in README: if the model rate-limits during a demo, swap the
-`OPENROUTER_MODEL` env var to any other OpenRouter model. The client is a thin
-fetch wrapper, not vendor-coupled.
+Fallback documented in README: if model rate-limits during demo, swap `OPENROUTER_MODEL` env var to any other OpenRouter model. Client = thin fetch wrapper, not vendor-coupled.
 
 ## No database, flat files only
 
-Config in `config/*.json` and `config/*.md`. Fixtures in `fixtures/`. Output to
-`output.json` and stdout. No SQLite, no Postgres, no key-value store, no run
-history beyond whatever the user redirects to a file.
+Config in `config/*.json` and `config/*.md`. Fixtures in `fixtures/`. Output to `output.json` and stdout. No SQLite, no Postgres, no key-value store, no run history beyond whatever user redirects to file.
 
-We did this because a POC's job is to make the core idea legible in one read,
-and a database makes the reader ask "why?" before they ask "what does it do?"
-Every file in the repo is either input, code, or output — there's no fourth
-category of "state that lives between runs and you have to reason about." The
-pipeline is pure: same inputs, same outputs (modulo LLM nondeterminism).
+POC's job = make core idea legible in one read. Database makes reader ask "why?" before "what does it do?" Every file in repo = input, code, or output. No fourth category of "state between runs you must reason about." Pipeline pure: same inputs, same outputs (modulo LLM nondeterminism).
 
-We considered and rejected:
+Considered, rejected:
 
-- **SQLite for run history.** Useful in a real product so you can diff this
-  week's signals against last week's and surface change. Out of scope for a
-  weekend demo. Adding it would push the "is this a real product?" question
-  ahead of the "does the signal extraction actually work?" question, which is
-  backwards for a POC.
-- **JSON files as a poor-man's DB (e.g. `runs/2026-05-22.json`).** Tempting
-  middle ground but commits us to a schema we'll regret. Better to ship the
-  one-shot pipeline cleanly and let anyone who wants history pipe stdout to a
-  file.
+- **SQLite for run history.** Useful in real product to diff this week's signals against last week's, surface change. Out of scope for weekend demo. Pushes "is this a real product?" ahead of "does signal extraction work?" — backwards for POC.
+- **JSON files as poor-man's DB (e.g. `runs/2026-05-22.json`).** Tempting middle ground, commits us to schema we'll regret. Ship one-shot pipeline cleanly, let anyone who wants history pipe stdout to file.
 
 ## Per-post extraction, then aggregate per prospect
 
-Each post hits the LLM individually. The extractor returns
-`{ intentSignals[], topics[], tone }` for that one post. After all posts for a
-prospect are extracted, a pure-TS aggregator unions the signals, ranks topics by
-frequency, picks the dominant tone, and selects the single most actionable post
-as the "anchor" for snippet generation.
+Each post hits LLM individually. Extractor returns `{ intentSignals[], topics[], tone }` for that one post. After all posts for prospect extracted, pure-TS aggregator unions signals, ranks topics by frequency, picks dominant tone, selects single most actionable post as "anchor" for snippet generation.
 
-We did this because per-post extraction is the unit that scales and the unit
-that's debuggable. If the snippet for a prospect looks wrong, we can point at
-the exact post that produced the bad signal. We can also cache extractions per
-post URI in the future without re-architecting. Aggregation is deterministic
-TypeScript, not another LLM call, so the costly nondeterministic step happens
-once per post and the cheap deterministic step happens once per prospect.
+Per-post extraction = unit that scales, unit that's debuggable. If prospect snippet looks wrong, point at exact post that produced bad signal. Can cache extractions per post URI later without re-architecting. Aggregation = deterministic TypeScript, not another LLM call, so costly nondeterministic step happens once per post, cheap deterministic step happens once per prospect.
 
-We considered and rejected:
+Considered, rejected:
 
-- **One LLM call per prospect that takes all posts and returns aggregated
-  signals.** Fewer API calls and lower latency, but the model sees 20 posts at
-  once and has to do both extraction and aggregation in one shot. Quality drops,
-  and you lose per-post traceability — if the snippet cites "hiring for a Rust
-  role" you can't easily verify which post said that.
-- **Two-stage LLM: extract per post, then a second LLM call to aggregate.**
-  Aggregation is dumb set/count work. Paying an LLM to do `groupBy` is silly
-  and adds nondeterminism for no quality gain.
+- **One LLM call per prospect taking all posts, returning aggregated signals.** Fewer API calls, lower latency, but model sees 20 posts at once and must do both extraction and aggregation in one shot. Quality drops, lose per-post traceability — if snippet cites "hiring for a Rust role" can't easily verify which post said that.
+- **Two-stage LLM: extract per post, second LLM call to aggregate.** Aggregation = dumb set/count work. Paying LLM to do `groupBy` silly, adds nondeterminism for no quality gain.
 
 ## zod-validated LLM JSON, fail loud on malformed responses
 
-Every LLM response is parsed and then run through a zod schema. If the model
-returns malformed JSON, missing fields, or wrong types, the extractor throws
-with the full offending payload included in the error. No silent fallback to
-an empty object, no "if signals undefined, treat as no signals."
+Every LLM response parsed then run through zod schema. If model returns malformed JSON, missing fields, or wrong types, extractor throws with full offending payload in error. No silent fallback to empty object, no "if signals undefined, treat as no signals."
 
-We did this because LLM output is the boundary between a probabilistic system
-and a deterministic one, and boundaries deserve validation. The whole pipeline
-downstream assumes signals are an array of known enum values, topics are
-strings, tone is one of a fixed set — code that breaks those assumptions should
-fail at the source, not three functions deep with a "cannot read property X of
-undefined" stack trace. Failing loud also makes prompt iteration honest: if the
-prompt regresses, the next run errors immediately instead of producing
-plausible-looking garbage.
+LLM output = boundary between probabilistic and deterministic system. Boundaries deserve validation. Whole pipeline downstream assumes signals = array of known enum values, topics = strings, tone = one of fixed set. Code breaking those assumptions should fail at source, not three functions deep with "cannot read property X of undefined" stack trace. Failing loud makes prompt iteration honest: if prompt regresses, next run errors immediately instead of producing plausible-looking garbage.
 
-Per malformed post, the error is caught at the per-post level — the bad post
-is logged, dropped from that prospect's pool, and the pipeline continues. One
-flaky LLM response should not kill a 10-prospect run.
+Per malformed post, error caught at per-post level — bad post logged, dropped from prospect's pool, pipeline continues. One flaky LLM response should not kill 10-prospect run.
 
-We considered and rejected:
+Considered, rejected:
 
-- **Trust the LLM's JSON output, parse, move on.** What every tutorial does.
-  Falls apart the first time the model adds a markdown fence or a trailing
-  comma. zod gives us one source of truth for "what shape do we accept" that
-  both validates and types the downstream code.
-- **Hand-written runtime checks (`if (typeof x.tone !== 'string')`).** Same
-  end result, more code, no static types derived from the check. zod gives
-  both for free.
-- **Retry on malformed response up to N times.** Worth doing in production.
-  Out of scope for a weekend POC; the failure mode (drop the post, continue)
-  is good enough and easier to reason about.
+- **Trust LLM's JSON output, parse, move on.** What every tutorial does. Falls apart first time model adds markdown fence or trailing comma. zod gives one source of truth for "what shape do we accept" — validates and types downstream code.
+- **Hand-written runtime checks (`if (typeof x.tone !== 'string')`).** Same result, more code, no static types from check. zod gives both free.
+- **Retry on malformed response up to N times.** Worth doing in production. Out of scope for weekend POC. Failure mode (drop post, continue) good enough and easier to reason about.
 
 ## Platform-tagged prospects, dispatcher picks the adapter
 
-Each entry in `config/prospects.json` carries a `platform` field
-(`"twitter" | "linkedin" | "bluesky"`). A single `dispatch.sourceFor(prospect)`
-function returns the right `SignalSource` instance for that prospect. The
-pipeline never sees which adapter ran — it just calls `fetchRecentPosts` on
-whatever it gets back.
+Each entry in `config/prospects.json` carries `platform` field (`"twitter" | "linkedin" | "bluesky"`). Single `dispatch.sourceFor(prospect)` function returns right `SignalSource` instance for that prospect. Pipeline never sees which adapter ran — just calls `fetchRecentPosts` on whatever it gets.
 
-We did this because the prospect list is the only place that knows what kind
-of handle each row is, and the pipeline shouldn't care. The dispatcher is one
-switch statement; adding a new source (Mastodon, Farcaster, real Twitter when
-budget allows) is two lines in the switch plus a new file. The interface,
-the dispatcher, and the prospect schema move together.
+Prospect list = only place that knows what kind of handle each row is. Pipeline shouldn't care. Dispatcher = one switch statement. Adding new source (Mastodon, Farcaster, real Twitter when budget allows) = two lines in switch plus new file. Interface, dispatcher, prospect schema move together.
 
-We considered and rejected:
+Considered, rejected:
 
-- **One mega-adapter that internally branches on platform.** Same code, worse
-  shape. Mixes Bluesky's HTTP client with fixture file IO in one file. Adding
-  a third source means editing the mega-adapter rather than adding a sibling.
-- **Caller passes adapter instance per prospect.** Pushes the platform-to-adapter
-  mapping out to whoever wires the pipeline (today, `index.ts`). Means anyone
-  swapping the entry point has to re-learn that mapping. The dispatcher
-  centralizes it.
-- **Infer platform from URL or handle shape.** Cute but fragile — `@user` could
-  be either Twitter or Bluesky depending on context. Explicit `platform` field
-  costs nothing and removes guesswork.
+- **One mega-adapter internally branching on platform.** Same code, worse shape. Mixes Bluesky HTTP client with fixture file IO in one file. Adding third source = editing mega-adapter instead of adding sibling.
+- **Caller passes adapter instance per prospect.** Pushes platform-to-adapter mapping out to whoever wires pipeline (today, `index.ts`). Anyone swapping entry point must re-learn mapping. Dispatcher centralizes it.
+- **Infer platform from URL or handle shape.** Cute but fragile — `@user` could be Twitter or Bluesky depending on context. Explicit `platform` field costs nothing, removes guesswork.
+
+## Provider-agnostic chat client, default to Cerebras
+
+LLM client now generic OpenAI-compatible `/chat/completions` wrapper parameterized by `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`. Default `https://api.cerebras.ai/v1` + `llama-3.3-70b`. Legacy `OPENROUTER_*` env vars still honored.
+
+OpenRouter free tier (Nemotron) hit daily request cap mid-development. Cerebras free tier = 1M tokens/day with no card, 30 RPM, 8k context — well above what per-post extraction + per-prospect snippet needs. Llama 3.3 70B comparable instruction-following + JSON quality vs Nemotron Nano 30B, faster on Cerebras LPU hardware.
+
+Generalizing client cost ~10 lines: dropped OpenRouter-specific `HTTP-Referer` / `X-Title` headers (decorative on OpenRouter, ignored elsewhere), threaded `baseUrl` through `createChatClient`. Renamed `createOpenRouterClient` → `createChatClient`, file `openrouter.ts` → `client.ts`. Was already the design intent ("swap models by changing a string") — now actually true across providers, not just within OpenRouter's catalog.
+
+Considered, rejected:
+
+- **Stick with OpenRouter, top up $10 to unlock 1000 req/day.** Solves immediate problem, pays for routing layer demo doesn't need. Cerebras direct = free + faster.
+- **Vendor SDK (`@cerebras/cerebras_cloud_sdk`).** Locks demo to one vendor again. Whole point of refactor = the opposite.
+- **Multi-provider router with fallback chain.** Over-engineered for POC. One provider with `.env` swap covers the actual failure mode (this provider's free tier dries up).

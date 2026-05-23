@@ -9,7 +9,7 @@ import {
   type ProspectResult,
 } from './types.js';
 import { createDispatcher } from './sources/dispatch.js';
-import { createOpenRouterClient } from './llm/openrouter.js';
+import { createChatClient } from './llm/client.js';
 import { createExtractor } from './extract/extractor.js';
 import { createSnippetGenerator } from './snippet/generator.js';
 import { aggregate } from './snippet/aggregate.js';
@@ -82,7 +82,7 @@ async function main(): Promise<void> {
   const env = loadEnv();
   const { prospects, icp, pitch } = await loadConfig();
   const dispatcher = createDispatcher({ fixturesRoot: FIXTURES_ROOT });
-  const llm = createOpenRouterClient({ apiKey: env.openrouterApiKey, model: env.model });
+  const llm = createChatClient({ apiKey: env.apiKey, baseUrl: env.baseUrl, model: env.model });
   const extractor = createExtractor(llm);
   const snippetGen = createSnippetGenerator(llm);
 

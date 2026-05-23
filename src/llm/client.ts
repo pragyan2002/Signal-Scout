@@ -3,23 +3,23 @@ export interface ChatMessage {
   content: string;
 }
 
-export interface OpenRouterClient {
+export interface ChatClient {
   chat(messages: ChatMessage[], opts?: { temperature?: number }): Promise<string>;
 }
 
-export function createOpenRouterClient(opts: {
+export function createChatClient(opts: {
   apiKey: string;
+  baseUrl: string;
   model: string;
-}): OpenRouterClient {
+}): ChatClient {
+  const url = `${opts.baseUrl.replace(/\/$/, '')}/chat/completions`;
   return {
     async chat(messages, callOpts) {
-      const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      const res = await fetch(url, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${opts.apiKey}`,
           'Content-Type': 'application/json',
-          'HTTP-Referer': 'https://github.com/signal-scout',
-          'X-Title': 'Signal Scout',
         },
         body: JSON.stringify({
           model: opts.model,
@@ -28,18 +28,18 @@ export function createOpenRouterClient(opts: {
         }),
       });
       if (!res.ok) {
-        throw new Error(`OpenRouter ${res.status}: ${await res.text()}`);
+        throw new Error(`LLM ${res.status}: ${await res.text()}`);
       }
       const json = (await res.json()) as {
         choices?: Array<{ message?: { content?: string } }>;
         error?: { message?: string };
       };
       if (json.error) {
-        throw new Error(`OpenRouter API error: ${json.error.message ?? JSON.stringify(json.error)}`);
+        throw new Error(`LLM API error: ${json.error.message ?? JSON.stringify(json.error)}`);
       }
       const content = json.choices?.[0]?.message?.content;
       if (!content) {
-        throw new Error(`OpenRouter returned no content: ${JSON.stringify(json).slice(0, 300)}`);
+        throw new Error(`LLM returned no content: ${JSON.stringify(json).slice(0, 300)}`);
       }
       return content;
     },

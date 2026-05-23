@@ -1,4 +1,4 @@
-import type { OpenRouterClient } from '../llm/openrouter.js';
+import type { ChatClient } from '../llm/client.js';
 import type { AggregatedSignals, Prospect } from '../types.js';
 import { SNIPPET_SYSTEM_PROMPT, buildSnippetUserPrompt } from './prompts.js';
 
@@ -11,7 +11,7 @@ export interface SnippetGenerator {
   }): Promise<string>;
 }
 
-export function createSnippetGenerator(llm: OpenRouterClient): SnippetGenerator {
+export function createSnippetGenerator(llm: ChatClient): SnippetGenerator {
   return {
     async generate(args) {
       const raw = await llm.chat(

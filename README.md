@@ -66,12 +66,15 @@ Every prospect ends up with:
 
 ## Running it
 
-Requires Node 20+ and an OpenRouter API key (free at [openrouter.ai/keys](https://openrouter.ai/keys)).
+Requires Node 20+ and an LLM API key. Default provider is
+[Cerebras](https://cloud.cerebras.ai/) (1M tokens/day free, no card).
+Any OpenAI-compatible chat-completions endpoint works — see
+`.env.example` for Groq and OpenRouter base URLs.
 
 ```bash
 npm install
 cp .env.example .env
-# paste your OpenRouter key into .env
+# paste your Cerebras key into .env
 npm start
 ```
 
@@ -85,8 +88,9 @@ and the same data written to `output.json`.
 - `config/icp.md` — your ICP description. Edit freely in prose.
 - `config/pitch.md` — your product pitch. Edit freely in prose.
 
-To change the LLM model, set `OPENROUTER_MODEL` in `.env` — anything OpenRouter
-serves works. The default is a free reasoning-tuned Nemotron variant.
+To change provider or model, set `LLM_BASE_URL` and `LLM_MODEL` in `.env`.
+Any OpenAI-compatible `/chat/completions` endpoint works (Cerebras, Groq,
+OpenRouter, etc). Default is Cerebras `llama-3.3-70b`.
 
 ## The two data sources, and why
 
@@ -145,7 +149,8 @@ The short version:
   loud at the source instead of three functions deep.
 - **No database.** Every file in this repo is input, code, or output. There
   is no fourth category.
-- **OpenRouter, not a vendor SDK.** Swap models by changing a string.
+- **OpenAI-compatible HTTP, not a vendor SDK.** Swap providers (Cerebras,
+  Groq, OpenRouter, …) by changing `LLM_BASE_URL` + `LLM_MODEL` in `.env`.
 
 ## Repo layout
 
@@ -162,7 +167,7 @@ signal-scout/
     ├── extract/               per-post LLM extraction
     ├── snippet/               aggregation + snippet generation
     ├── render/                terminal table + output.json
-    ├── llm/                   thin OpenRouter client
+    ├── llm/                   thin OpenAI-compatible chat client
     └── util/                  env loading, safe JSON parsing
 ```
 
