@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-23T12:14:58.499Z",
-  "model": "llama3.1-8b",
+  "generatedAt": "2026-05-23T12:32:11.503Z",
+  "model": "llama-3.3-70b-versatile",
   "results": [
     {
       "prospect": {
@@ -18,10 +18,10 @@
           "tool_complaint"
         ],
         "topTopics": [
-          "fundraising",
           "outbound sales",
-          "gtm",
-          "saas",
+          "venture capital",
+          "seed round",
+          "b2b saas",
           "ai"
         ],
         "dominantTone": "celebratory",
@@ -38,13 +38,14 @@
               "fundraising"
             ],
             "topics": [
-              "fundraising"
+              "venture capital",
+              "seed round"
             ],
             "tone": "celebratory"
           }
         }
       },
-      "snippet": "You've just closed a $4.2M seed round, and now the hard work of growth starts.",
+      "snippet": "Closing a seed round likely means new expectations for growth and scaling the team.",
       "error": null
     },
     {
@@ -60,12 +61,12 @@
         "topSignals": [
           "launching",
           "celebrating_win",
-          "hiring"
+          "tool_complaint"
         ],
         "topTopics": [
-          "outbound sales",
           "devops",
           "alert fatigue",
+          "customer acquisition",
           "hacker news",
           "growth hacking"
         ],
@@ -80,8 +81,8 @@
           },
           "signals": {
             "intentSignals": [
-              "hiring",
-              "tool_complaint"
+              "tool_complaint",
+              "seeking_advice"
             ],
             "topics": [
               "outbound sales",
@@ -91,7 +92,7 @@
           }
         }
       },
-      "snippet": "You're the sole outbound representative for your YC-backed startup, and every tool you look at assumes a team, not a individual.",
+      "snippet": "Evaluating outbound tools designed for teams doesn't seem to be working for a solo operator like yourself.",
       "error": null
     },
     {
@@ -105,15 +106,15 @@
       "postsExtracted": 3,
       "aggregated": {
         "topSignals": [
-          "hiring",
-          "tool_complaint"
+          "tool_complaint",
+          "hiring"
         ],
         "topTopics": [
           "outbound sales",
-          "tooling",
+          "sales tools",
           "customer_acquisition",
           "infrastructure",
-          "YC"
+          "sales hiring"
         ],
         "dominantTone": "frustrated",
         "anchor": {
@@ -130,13 +131,13 @@
             ],
             "topics": [
               "outbound sales",
-              "tooling"
+              "sales tools"
             ],
             "tone": "frustrated"
           }
         }
       },
-      "snippet": "Evaluating six outbound tools in two weeks and rejecting them all suggests a high bar for what you're looking for in a solution.",
+      "snippet": "Evaluating six outbound tools in two weeks is a significant time investment for a frustrating outcome.",
       "error": null
     },
     {
@@ -155,11 +156,11 @@
           "fundraising"
         ],
         "topTopics": [
-          "finance",
-          "productivity",
-          "midmarket",
-          "outbound sales",
-          "engineering"
+          "financial software",
+          "accounting",
+          "sales hiring",
+          "series a",
+          "gtm"
         ],
         "dominantTone": "excited",
         "anchor": {
@@ -176,14 +177,15 @@
               "fundraising"
             ],
             "topics": [
-              "outbound sales",
-              "engineering"
+              "sales hiring",
+              "series a",
+              "gtm"
             ],
             "tone": "excited"
           }
         }
       },
-      "snippet": "Hiring two more engineers and a Head of Sales suggests you're scaling a functional team, but still navigating the challenges of a growing GTM motion.",
+      "snippet": "Doubling the team after a Series A close suggests scaling the sales function is a priority.",
       "error": null
     },
     {
@@ -197,14 +199,16 @@
       "postsExtracted": 2,
       "aggregated": {
         "topSignals": [
-          "celebrating_win"
+          "celebrating_win",
+          "sharing_learning"
         ],
         "topTopics": [
           "outbound sales",
           "prospect research",
-          "email marketing"
+          "personalization",
+          "enterprise contracts"
         ],
-        "dominantTone": "excited",
+        "dominantTone": "reflective",
         "anchor": {
           "post": {
             "id": "li-7298775432109876544",
@@ -218,13 +222,14 @@
               "celebrating_win"
             ],
             "topics": [
-              "outbound sales"
+              "outbound sales",
+              "enterprise contracts"
             ],
-            "tone": "excited"
+            "tone": "celebratory"
           }
         }
       },
-      "snippet": "You've closed two enterprise contracts this month using outbound with four months of nurture, countering claims that outbound is dead.",
+      "snippet": "Four months of nurture is a significant investment for an outbound deal.",
       "error": null
     },
     {
@@ -239,23 +244,23 @@
       "aggregated": {
         "topSignals": [
           "celebrating_win",
-          "launching",
-          "tool_complaint"
+          "tool_complaint",
+          "seeking_advice"
         ],
         "topTopics": [
-          "devops",
+          "humor",
           "travel",
-          "npm",
-          "github actions",
-          "security"
+          "social media",
+          "testing",
+          "programming languages"
         ],
         "dominantTone": "excited",
         "anchor": {
           "post": {
-            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mmdfjixd2s2y",
-            "url": "https://bsky.app/profile/pfrazee.com/post/3mmdfjixd2s2y",
-            "text": "This isn’t a fully thought out position but like\n\nThe recent NPM package compromises were detected and announced really quickly. And while there are clearly gaps it exposes with GitHub actions and NPM, I wonder if it’s wrong to be pessimistic about the situation",
-            "createdAt": "2026-05-21T02:43:01.503Z",
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mm5jdesgms2h",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3mm5jdesgms2h",
+            "text": "why is my feed only hot dogs. are we getting hot dogged.",
+            "createdAt": "2026-05-18T18:35:12.360Z",
             "authorHandle": "pfrazee.com"
           },
           "signals": {
@@ -263,15 +268,14 @@
               "tool_complaint"
             ],
             "topics": [
-              "npm",
-              "github actions",
-              "security"
+              "social media",
+              "algorithm"
             ],
-            "tone": "reflective"
+            "tone": "frustrated"
           }
         }
       },
-      "snippet": "You're wondering if it's wrong to be pessimistic about quick detection of NPM package compromises.",
+      "snippet": "Your feed being overrun with hot dogs suggests a peculiar algorithmic quirk.",
       "error": null
     }
   ]
