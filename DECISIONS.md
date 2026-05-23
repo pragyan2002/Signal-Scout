@@ -136,3 +136,42 @@ Rejected:
 
 - **Keep 30-word cap.** Under 25 forces compression that eliminates filler faster than any other rule.
 - **Move examples to user prompt.** System prompt always present, cheapest enforcement. User prompt grows with anchor post content.
+
+## Prompt misfires found in run output — six fixes applied
+
+Code review of `runs/2026-05-23.json` found three classes of bad output, each traceable to a specific design decision.
+
+**Fabrication from inline example.** The system prompt's `Good:` example was a vivid sentence about cutting deploy time. When the anchor post lacked enough detail (pfrazee.com: "everything just takes longer to do"), the model lifted the example verbatim as a real snippet — completely unrelated to the post. Root cause: inline examples in system prompts are part of the model's generation context, not just instructions. Fixed by wrapping the example in `<example>` tags with a fictional post context and explicit bad/good pair, so the model treats it as illustration, not fallback template.
+
+**Rule 3 violations in 3 of 6 snippets.** Rule 3 said "do not echo their words back" but the self-check only tested grounding ("does your opener reference that thing?"), not originality. Model satisfied both simultaneously by echoing. Updated self-check to explicitly ask: "does your opener reference that thing WITHOUT repeating their exact words, phrases, or numbers?" and tightened rule 3 wording to match. Anti-fabrication fallback also tightened: added explicit ban on inferring outcomes or implications not stated in the post (priya_ships snippet invented "no one is getting your message" from a post about email quality, not deliverability).
+
+**Anchor selected for signal priority, not content richness.** `scorePost` ranked on signal type + 14-day recency boost. A thin `launching` post (85 pts) beat richer lower-signal posts because signal priority dominates. Thin anchor → model can't find quotable detail → fabrication. Added `THIN_POST_PENALTY = 20` for posts under 100 chars. This shifts a thin high-signal post below a rich lower-signal post when the gap is under 20 pts, without overriding a genuine fundraising or launching anchor with real content.
+
+**`"none"` co-emitted with real signals.** Extraction prompt said "if nothing applies, return `['none']`" but didn't forbid mixing `none` with real signals. Model emitted `["fundraising", "none"]` for sam-rivers — reads as hedging, not a classification. Added explicit rule: `"none"` only valid when `intentSignals` would otherwise be empty.
+
+**Magic constants decoupled.** `scorePost` hardcoded `14` for recency decay window, same number as `SINCE_DAYS` in index.ts with no link. Extracted `RECENCY_WINDOW_DAYS`, `THIN_POST_CHARS`, `THIN_POST_PENALTY` as named constants in `aggregate.ts`. Added cross-reference comment in `index.ts` so they don't silently diverge if fetch window changes.
+
+Rejected:
+
+- **Re-prompt on bad snippets.** Generator already retries on banned phrases. Retrying on echo/fabrication requires a verifier prompt — another LLM call with its own failure modes. Better to tighten the generation prompt so the first pass is right.
+- **Content-richness heuristic in extraction.** Adding a `richness` field to `ExtractedSignals` would make richness a model judgement (nondeterministic) instead of a text-length proxy (deterministic). At POC scale, char count is cheaper and good enough.
+- **Removing the example entirely.** Without a concrete contrast, rule 3 and the specificity rule are hard to calibrate. The fix is isolating the example in `<example>` tags, not removing it.
+
+## Four targeted fixes after external review
+
+Post-review pass identified four issues worth addressing before the Cardinal conversation.
+
+**Fixture recency filter removed from `MockTwitterSource`.** The mock adapter was applying the same `sinceDays` window as live sources. Fixtures have static hardcoded dates — in two weeks a fresh clone would return zero posts for every mock prospect. Fixtures are not real data; they don't need recency filtering. `sinceDays` parameter is now ignored in `MockTwitterSource` (`void sinceDays`). Live sources (`BlueskySource`) still filter normally.
+
+**`tool_complaint` bumped from 80 → 90 in `SIGNAL_PRIORITY`.** A post that directly names the problem the product solves is a stronger anchor than a generic launch announcement. The 5-point gap between `launching` (85) and `tool_complaint` (80) was too small — recency noise could override it. At 90, a direct tool complaint beats a same-age launching post by 5 points, correctly weighting specificity of fit over general launch excitement. Marcus's Postgres complaint post now wins over his beta launch post as intended.
+
+**`model` field added to `output.json` metadata.** `writeJsonOutput` now accepts `{ model: string }` and writes it alongside `generatedAt`. After five runs with different providers and models, the artifact now records which model produced it — closing the gap between `DECISIONS.md` model-selection rationale and the actual run artifacts.
+
+**Jordan Chen fixture dates swapped.** Stealth launch post moved from May 20 → May 22; hiring post moved from May 22 → May 20. Launch post is now 2 days more recent than hiring. With `launching` (85) outscoring `hiring` (70) by 15 points and a 2-day recency advantage, the aggregator correctly selects the stealth launch post as anchor even if the hiring post picks up a secondary `fundraising` classification.
+
+**`RECENCY_WINDOW_DAYS` centralized.** Extracted to `src/util/constants.ts`, imported by both `aggregate.ts` and `index.ts`. Eliminates the "keep in sync" comment that acknowledged a latent bug.
+
+Rejected:
+
+- **Dynamic fixture dates (compute relative to `Date.now()` at load time).** Would require either mutating the JSON schema or adding generation logic to `MockTwitterSource`. Static JSON fixtures that bypass recency are simpler and match what fixtures are for: fixed, readable, reviewable test data.
+- **Raising `tool_complaint` above `fundraising` (100).** A direct complaint is a strong signal but a fundraise changes what a prospect needs right now (headcount, velocity, new vendors). Fundraising staying top is correct.

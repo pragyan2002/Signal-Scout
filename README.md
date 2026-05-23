@@ -159,6 +159,9 @@ The short version:
   is no fourth category.
 - **OpenAI-compatible HTTP, not a vendor SDK.** Swap providers (Cerebras,
   Groq, OpenRouter, …) by changing `LLM_BASE_URL` + `LLM_MODEL` in `.env`.
+- **Hiring posts asking for referrals are scored near zero.** The aggregator
+  filters out "know anyone / refer / intro" hiring posts from anchor selection
+  because they reflect network broadcasting, not the prospect's own pain.
 
 ## Repo layout
 

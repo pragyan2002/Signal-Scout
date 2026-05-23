@@ -16,9 +16,9 @@ import { aggregate } from './snippet/aggregate.js';
 import { renderTable } from './render/table.js';
 import { writeJsonOutput } from './render/json.js';
 import { loadEnv } from './util/env.js';
+import { RECENCY_WINDOW_DAYS } from './util/constants.js';
 
-// Keep in sync with RECENCY_WINDOW_DAYS in snippet/aggregate.ts
-const SINCE_DAYS = 14;
+const SINCE_DAYS = RECENCY_WINDOW_DAYS;
 const ROOT = process.cwd();
 const FIXTURES_ROOT = join(ROOT, 'fixtures');
 const CONFIG_DIR = join(ROOT, 'config');
@@ -138,7 +138,7 @@ async function main(): Promise<void> {
   }
 
   console.log('\n' + renderTable(results) + '\n');
-  await writeJsonOutput(OUTPUT_FILE, results);
+  await writeJsonOutput(OUTPUT_FILE, results, { model: env.model });
   console.log(chalk.dim(`  wrote ${OUTPUT_FILE}\n`));
 }
 

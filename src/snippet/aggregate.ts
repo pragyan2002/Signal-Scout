@@ -4,16 +4,14 @@ import type {
   IntentSignal,
   Tone,
 } from '../types.js';
-
-// Keep RECENCY_WINDOW_DAYS in sync with SINCE_DAYS in index.ts
-const RECENCY_WINDOW_DAYS = 14;
+import { RECENCY_WINDOW_DAYS } from '../util/constants.js';
 const THIN_POST_CHARS = 100;
 const THIN_POST_PENALTY = 20;
 
 const SIGNAL_PRIORITY: Record<IntentSignal, number> = {
   fundraising: 100,
   launching: 85,
-  tool_complaint: 80,
+  tool_complaint: 90,
   hiring: 70,
   celebrating_win: 60,
   seeking_advice: 50,

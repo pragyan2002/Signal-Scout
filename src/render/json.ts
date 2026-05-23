@@ -1,9 +1,14 @@
 import { writeFile } from 'node:fs/promises';
 import type { ProspectResult } from '../types.js';
 
-export async function writeJsonOutput(path: string, results: ProspectResult[]): Promise<void> {
+export async function writeJsonOutput(
+  path: string,
+  results: ProspectResult[],
+  meta: { model: string },
+): Promise<void> {
   const payload = {
     generatedAt: new Date().toISOString(),
+    model: meta.model,
     results: results.map((r) => ({
       prospect: r.prospect,
       postsFetched: r.postsFetched,

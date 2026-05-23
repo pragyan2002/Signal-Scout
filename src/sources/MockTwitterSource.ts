@@ -34,9 +34,9 @@ export class MockTwitterSource implements SignalSource {
       throw new Error(`Fixture not found for ${prospect.handle}: ${file}`);
     }
     const parsed = FixtureFileSchema.parse(JSON.parse(raw));
-    const cutoff = Date.now() - sinceDays * 24 * 60 * 60 * 1000;
+    // Fixtures have static dates — skip recency filter so they never age out
+    void sinceDays;
     return parsed.posts
-      .filter((p) => Date.parse(p.createdAt) >= cutoff)
       .map((p) => ({
         id: p.id,
         url: p.url,
