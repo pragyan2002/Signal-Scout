@@ -89,3 +89,18 @@ Considered, rejected:
 - **Stick with OpenRouter, top up $10 to unlock 1000 req/day.** Solves immediate problem, pays for routing layer demo doesn't need. Cerebras direct = free + faster.
 - **Vendor SDK (`@cerebras/cerebras_cloud_sdk`).** Locks demo to one vendor again. Whole point of refactor = the opposite.
 - **Multi-provider router with fallback chain.** Over-engineered for POC. One provider with `.env` swap covers the actual failure mode (this provider's free tier dries up).
+
+## Throttle + 429 retry in the chat client
+
+Chat client serializes calls through a single promise chain and enforces a minimum gap between requests (default 13s, tunable via `LLM_MIN_INTERVAL_MS`). On `429` or `5xx` it retries up to 3 times, honoring `Retry-After` header and the `"try again in Xs"` body string Cerebras returns. Exponential backoff (2s/4s/8s, capped 30s) as fallback.
+
+Cerebras free tier on `llama3.1-8b` = 5 RPM, enforced as ~1 req/12s. Pipeline issues one LLM call per post + one per prospect, sequentially — but TypeScript "sequential" still bursts in milliseconds, blowing the cap instantly. A 10-prospect run with ~20 posts each = ~210 calls; at 13s/call ≈ 45 min. Slow, but completes without intervention. Daily and per-hour budgets (2400 RPD, 150 RPH, 1M TPD) easily fit a POC run; RPM is the only binding constraint.
+
+Throttle lives in the client wrapper, not the pipeline. Pipeline code stays oblivious to provider rate-limit math. Swap to a paid provider, set `LLM_MIN_INTERVAL_MS=0`, same code runs in a few minutes.
+
+Considered, rejected:
+
+- **Manual `setTimeout` between calls in `index.ts`.** Spreads rate-limit knowledge across the codebase. Future second caller (e.g. snippet retry path) forgets to sleep.
+- **`p-throttle` or `bottleneck` library.** Twelve lines avoided by adding a dependency. Throttle here is a single mutex + a timestamp; library would carry features (concurrency, weight) the POC never uses.
+- **Parallel calls with a token-bucket limiter.** Would help on providers with higher RPM. On Cerebras free 5 RPM, max useful concurrency = 1. Adds complexity for zero gain at the binding constraint.
+- **Just retry on 429, no throttle.** Works but wastes a round-trip per call and depends on every retry-after being honest. Pre-throttling means the happy path is the common path.

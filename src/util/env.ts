@@ -4,10 +4,12 @@ export interface AppEnv {
   apiKey: string;
   baseUrl: string;
   model: string;
+  minIntervalMs: number;
 }
 
 const DEFAULT_BASE_URL = 'https://api.cerebras.ai/v1';
 const DEFAULT_MODEL = 'llama3.1-8b';
+const DEFAULT_MIN_INTERVAL_MS = 13_000;
 
 export function loadEnv(): AppEnv {
   const apiKey =
@@ -25,5 +27,12 @@ export function loadEnv(): AppEnv {
     process.env.LLM_MODEL?.trim() ||
     process.env.OPENROUTER_MODEL?.trim() ||
     DEFAULT_MODEL;
-  return { apiKey, baseUrl, model };
+  const minIntervalMs = parsePositiveInt(process.env.LLM_MIN_INTERVAL_MS) ?? DEFAULT_MIN_INTERVAL_MS;
+  return { apiKey, baseUrl, model, minIntervalMs };
+}
+
+function parsePositiveInt(raw: string | undefined): number | undefined {
+  if (!raw) return undefined;
+  const n = Number(raw);
+  return Number.isFinite(n) && n >= 0 ? n : undefined;
 }

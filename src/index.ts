@@ -82,7 +82,12 @@ async function main(): Promise<void> {
   const env = loadEnv();
   const { prospects, icp, pitch } = await loadConfig();
   const dispatcher = createDispatcher({ fixturesRoot: FIXTURES_ROOT });
-  const llm = createChatClient({ apiKey: env.apiKey, baseUrl: env.baseUrl, model: env.model });
+  const llm = createChatClient({
+    apiKey: env.apiKey,
+    baseUrl: env.baseUrl,
+    model: env.model,
+    minIntervalMs: env.minIntervalMs,
+  });
   const extractor = createExtractor(llm);
   const snippetGen = createSnippetGenerator(llm);
 
