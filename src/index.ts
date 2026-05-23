@@ -17,6 +17,7 @@ import { renderTable } from './render/table.js';
 import { writeJsonOutput } from './render/json.js';
 import { loadEnv } from './util/env.js';
 
+// Keep in sync with RECENCY_WINDOW_DAYS in snippet/aggregate.ts
 const SINCE_DAYS = 14;
 const ROOT = process.cwd();
 const FIXTURES_ROOT = join(ROOT, 'fixtures');

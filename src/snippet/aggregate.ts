@@ -5,6 +5,11 @@ import type {
   Tone,
 } from '../types.js';
 
+// Keep RECENCY_WINDOW_DAYS in sync with SINCE_DAYS in index.ts
+const RECENCY_WINDOW_DAYS = 14;
+const THIN_POST_CHARS = 100;
+const THIN_POST_PENALTY = 20;
+
 const SIGNAL_PRIORITY: Record<IntentSignal, number> = {
   fundraising: 100,
   launching: 85,
@@ -50,9 +55,10 @@ function scorePost(p: ExtractedPost, nowMs: number): number {
   );
   const recencyBoost = Math.max(
     0,
-    14 - (nowMs - Date.parse(p.post.createdAt)) / (24 * 60 * 60 * 1000),
+    RECENCY_WINDOW_DAYS - (nowMs - Date.parse(p.post.createdAt)) / (24 * 60 * 60 * 1000),
   );
-  return best + recencyBoost;
+  const thinPenalty = p.post.text.length < THIN_POST_CHARS ? THIN_POST_PENALTY : 0;
+  return best + recencyBoost - thinPenalty;
 }
 
 export function aggregate(extracted: ExtractedPost[]): AggregatedSignals | null {

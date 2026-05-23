@@ -17,7 +17,8 @@ Rules:
 - "launching" means shipping a product or new feature publicly.
 - "tool_complaint" means expressing dissatisfaction with a specific tool, vendor, or category of software.
 - "celebrating_win" is for traction wins (revenue, customers, milestones), not for shipping a product (that's "launching").
-- Topics describe what the post is ABOUT, not the emotion. Avoid generic words like "business" or "startup".`;
+- Topics describe what the post is ABOUT, not the emotion. Avoid generic words like "business" or "startup".
+- Do not include "none" if any other signal is present. "none" is only valid when intentSignals would otherwise be empty.`;
 
 export function buildExtractionUserPrompt(post: Post): string {
   return `Post by @${post.authorHandle} on ${post.createdAt}:\n\n${post.text}`;
