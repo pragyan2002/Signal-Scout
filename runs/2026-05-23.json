@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T12:32:11.503Z",
+  "generatedAt": "2026-05-23T12:54:09.666Z",
   "model": "llama-3.3-70b-versatile",
   "results": [
     {
@@ -19,8 +19,8 @@
         ],
         "topTopics": [
           "outbound sales",
+          "fundraising",
           "venture capital",
-          "seed round",
           "b2b saas",
           "ai"
         ],
@@ -38,14 +38,14 @@
               "fundraising"
             ],
             "topics": [
-              "venture capital",
-              "seed round"
+              "fundraising",
+              "venture capital"
             ],
             "tone": "celebratory"
           }
         }
       },
-      "snippet": "Closing a seed round likely means new expectations for growth and scaling the team.",
+      "snippet": "Closing a seed round likely brings a mix of relief and new pressure to deliver.",
       "error": null
     },
     {
@@ -67,8 +67,8 @@
           "devops",
           "alert fatigue",
           "customer acquisition",
-          "hacker news",
-          "growth hacking"
+          "growth hacking",
+          "outbound sales"
         ],
         "dominantTone": "celebratory",
         "anchor": {
@@ -92,7 +92,7 @@
           }
         }
       },
-      "snippet": "Evaluating outbound tools designed for teams doesn't seem to be working for a solo operator like yourself.",
+      "snippet": "Building an outbound process with just a Postgres connection suggests a very hands-on approach to sales.",
       "error": null
     },
     {
@@ -112,7 +112,6 @@
         "topTopics": [
           "outbound sales",
           "sales tools",
-          "customer_acquisition",
           "infrastructure",
           "sales hiring"
         ],
@@ -137,7 +136,7 @@
           }
         }
       },
-      "snippet": "Evaluating six outbound tools in two weeks is a significant time investment for a frustrating outcome.",
+      "snippet": "Evaluating six outbound tools in two weeks is a significant time investment for a founder.",
       "error": null
     },
     {
@@ -159,8 +158,8 @@
           "financial software",
           "accounting",
           "sales hiring",
-          "series a",
-          "gtm"
+          "gtm strategy",
+          "customer_support"
         ],
         "dominantTone": "excited",
         "anchor": {
@@ -178,14 +177,13 @@
             ],
             "topics": [
               "sales hiring",
-              "series a",
-              "gtm"
+              "gtm strategy"
             ],
             "tone": "excited"
           }
         }
       },
-      "snippet": "Doubling the team after a Series A close suggests scaling the sales function is a priority.",
+      "snippet": "Doubling the team in a month suggests a very aggressive growth timeline.",
       "error": null
     },
     {
@@ -245,11 +243,11 @@
         "topSignals": [
           "celebrating_win",
           "tool_complaint",
-          "seeking_advice"
+          "sharing_learning"
         ],
         "topTopics": [
-          "humor",
           "travel",
+          "humor",
           "social media",
           "testing",
           "programming languages"
@@ -257,25 +255,25 @@
         "dominantTone": "excited",
         "anchor": {
           "post": {
-            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mm5jdesgms2h",
-            "url": "https://bsky.app/profile/pfrazee.com/post/3mm5jdesgms2h",
-            "text": "why is my feed only hot dogs. are we getting hot dogged.",
-            "createdAt": "2026-05-18T18:35:12.360Z",
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mm6oaufzqk2r",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3mm6oaufzqk2r",
+            "text": "Claude’s iOS app has a voice mode and it’s my first real experience of using an audio interface. It just is Jarvis. I can’t believe what I just experienced.",
+            "createdAt": "2026-05-19T05:35:56.514Z",
             "authorHandle": "pfrazee.com"
           },
           "signals": {
             "intentSignals": [
-              "tool_complaint"
+              "celebrating_win"
             ],
             "topics": [
-              "social media",
-              "algorithm"
+              "ai",
+              "voice interface"
             ],
-            "tone": "frustrated"
+            "tone": "excited"
           }
         }
       },
-      "snippet": "Your feed being overrun with hot dogs suggests a peculiar algorithmic quirk.",
+      "snippet": "Experiencing an audio interface for the first time can be surreal.",
       "error": null
     }
   ]
