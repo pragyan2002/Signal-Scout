@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T09:04:50.533Z",
+  "generatedAt": "2026-05-23T09:39:13.365Z",
   "results": [
     {
       "prospect": {
@@ -45,7 +45,7 @@
           }
         }
       },
-      "snippet": "Your seed round with Initialized and other operators suggests you're now in a position to invest in the actual work, not just raise money for it.",
+      "snippet": "Learning from operators that have been guiding you for years likely saved you time and effort in closing your seed round.",
       "error": null
     },
     {
@@ -67,33 +67,31 @@
           "outbound sales",
           "devops",
           "alert fatigue",
-          "public beta",
-          "hacker news"
+          "hacker news",
+          "customer acquisition"
         ],
         "dominantTone": "celebratory",
         "anchor": {
           "post": {
-            "id": "1789022345678901236",
-            "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
-            "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
-            "createdAt": "2026-05-23T11:48:00Z",
+            "id": "1789022345678901234",
+            "url": "https://twitter.com/marcus_builds/status/1789022345678901234",
+            "text": "Shipped our public beta this morning. Six months of building, three pivots, two near-deaths, one live product. Link in bio. If you're a DevOps engineer drowning in alert fatigue, this is for you.",
+            "createdAt": "2026-05-20T14:00:00Z",
             "authorHandle": "marcus_builds"
           },
           "signals": {
             "intentSignals": [
-              "hiring",
-              "tool_complaint"
+              "launching"
             ],
             "topics": [
-              "outbound sales",
-              "sales development",
-              "postgres"
+              "devops",
+              "alert fatigue"
             ],
-            "tone": "frustrated"
+            "tone": "celebratory"
           }
         }
       },
-      "snippet": "You're trying to do outbound with just a Postgres connection and yourself, which is an honest approach that most people just talk about.",
+      "snippet": "Building a product that survives three pivots and two near-deaths is a testament to your team's grit and adaptability.",
       "error": null
     },
     {
@@ -120,26 +118,25 @@
         "dominantTone": "frustrated",
         "anchor": {
           "post": {
-            "id": "1789032345678901236",
-            "url": "https://twitter.com/priya_ships/status/1789032345678901236",
-            "text": "Looking for a founding AE. YC alum or equivalent. Has done outbound at a technical product company. Comfortable owning the entire pipeline. Equity-heavy. DMs open.",
-            "createdAt": "2026-05-22T16:45:00Z",
+            "id": "1789032345678901234",
+            "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+            "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+            "createdAt": "2026-05-15T18:22:00Z",
             "authorHandle": "priya_ships"
           },
           "signals": {
             "intentSignals": [
-              "hiring"
+              "tool_complaint"
             ],
             "topics": [
               "outbound sales",
-              "YC",
-              "founder"
+              "tooling"
             ],
-            "tone": "neutral"
+            "tone": "frustrated"
           }
         }
       },
-      "snippet": "Posting about a founding AE role with equity-heavy compensation suggests you're ready to invest in the right person to own your entire pipeline, not just hire more bodies.",
+      "snippet": "Evaluating six outbound tools that all ask for $800/month is a clear sign that the status quo isn't delivering value for your time.",
       "error": null
     },
     {
@@ -162,7 +159,7 @@
           "productivity",
           "mid-market",
           "outbound sales",
-          "growing team"
+          "engineering"
         ],
         "dominantTone": "excited",
         "anchor": {
@@ -180,13 +177,14 @@
             ],
             "topics": [
               "outbound sales",
-              "growing team"
+              "engineering",
+              "fundraising"
             ],
             "tone": "excited"
           }
         }
       },
-      "snippet": "Your willingness to introduce us to a Head of Sales suggests you understand the GTM hire is the last puzzle piece for a scalable motion.",
+      "snippet": "You're listing specific positions for hire, including a Head of Sales, which implies you've tried various approaches to scaling your GTM but haven't yet found the right fit.",
       "error": null
     },
     {
@@ -205,8 +203,8 @@
         ],
         "topTopics": [
           "outbound sales",
-          "prospect research",
-          "email marketing"
+          "devops",
+          "personalization"
         ],
         "dominantTone": "reflective",
         "anchor": {
@@ -224,8 +222,8 @@
             ],
             "topics": [
               "outbound sales",
-              "prospect research",
-              "email marketing"
+              "devops",
+              "personalization"
             ],
             "tone": "reflective"
           }
@@ -256,7 +254,7 @@
           "github actions",
           "security"
         ],
-        "dominantTone": "excited",
+        "dominantTone": "neutral",
         "anchor": {
           "post": {
             "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mlyqhtb2oc2l",
@@ -277,7 +275,7 @@
           }
         }
       },
-      "snippet": "Adding verification criteria to your specs is a great step, but it's clear you're now spending more time on optimization than actual dev work.",
+      "snippet": "Rebuilding your entire outbound process in six weeks to hit 6.8% only to struggle with every step taking longer is a common YC founder's trap we've seen before.",
       "error": null
     },
     {
