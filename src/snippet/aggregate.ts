@@ -56,7 +56,8 @@ function scorePost(p: ExtractedPost, nowMs: number): number {
     RECENCY_WINDOW_DAYS - (nowMs - Date.parse(p.post.createdAt)) / (24 * 60 * 60 * 1000),
   );
   const thinPenalty = p.post.text.length < THIN_POST_CHARS ? THIN_POST_PENALTY : 0;
-  return best + recencyBoost - thinPenalty;
+  const lengthPenalty = p.post.text.length < 60 ? 50 : 0;
+  return best + recencyBoost - thinPenalty - lengthPenalty;
 }
 
 export function aggregate(extracted: ExtractedPost[]): AggregatedSignals | null {
