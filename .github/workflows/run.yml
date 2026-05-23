@@ -20,9 +20,9 @@ jobs:
     env:
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       # Defaults match .env.example. Override here if you change providers.
-      LLM_BASE_URL: https://api.cerebras.ai/v1
-      LLM_MODEL: llama3.1-8b
-      LLM_MIN_INTERVAL_MS: "13000"
+      LLM_BASE_URL: https://api.groq.com/openai/v1
+      LLM_MODEL: llama-3.3-70b-versatile
+      LLM_MIN_INTERVAL_MS: "2000"
     steps:
       - uses: actions/checkout@v4
 
