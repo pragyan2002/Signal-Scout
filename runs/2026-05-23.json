@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T09:57:44.034Z",
+  "generatedAt": "2026-05-23T11:34:23.346Z",
   "results": [
     {
       "prospect": {
@@ -17,13 +17,13 @@
           "tool_complaint"
         ],
         "topTopics": [
-          "outbound sales",
           "fundraising",
-          "seed round",
+          "outbound sales",
+          "seed_round",
           "gtm",
           "saas"
         ],
-        "dominantTone": "celebratory",
+        "dominantTone": "excited",
         "anchor": {
           "post": {
             "id": "1789012345678901234",
@@ -38,13 +38,13 @@
             ],
             "topics": [
               "fundraising",
-              "seed round"
+              "seed_round"
             ],
-            "tone": "celebratory"
+            "tone": "excited"
           }
         }
       },
-      "snippet": "Now the actual work starts, but that phrase doesn't even begin to capture the complexity of scaling a seed-stage GTM.",
+      "snippet": "Closing a seed round with $4.2M in funding from Initialized and operators you've learned from suggests you've been scaling quickly.",
       "error": null
     },
     {
@@ -65,9 +65,9 @@
         "topTopics": [
           "outbound sales",
           "devops",
-          "alert fatigue",
-          "public beta",
-          "hacker news"
+          "product_launch",
+          "hacker news",
+          "growth hacking"
         ],
         "dominantTone": "celebratory",
         "anchor": {
@@ -84,14 +84,13 @@
             ],
             "topics": [
               "devops",
-              "alert fatigue",
-              "public beta"
+              "product_launch"
             ],
             "tone": "celebratory"
           }
         }
       },
-      "snippet": "Six months of building, three pivots, and two near-deaths are just the normal risks of launching a new product – not the only ones.",
+      "snippet": "Six months of building suggest a long journey to this public beta.",
       "error": null
     },
     {
@@ -136,7 +135,7 @@
           }
         }
       },
-      "snippet": "All six outbound tools you evaluated last week cost at least $800/month, and it's now clear that no one is getting your message.",
+      "snippet": "You've evaluated six outbound tools in two weeks, all of which produce emails that sound like they were written by a generic template.",
       "error": null
     },
     {
@@ -157,9 +156,9 @@
         "topTopics": [
           "finance",
           "productivity",
-          "mid-market",
+          "midmarket",
           "outbound sales",
-          "gtm"
+          "growing team"
         ],
         "dominantTone": "excited",
         "anchor": {
@@ -177,13 +176,13 @@
             ],
             "topics": [
               "outbound sales",
-              "gtm"
+              "growing team"
             ],
             "tone": "excited"
           }
         }
       },
-      "snippet": "Hiring multiple people at once, including a Head of Sales, usually means you're not just scaling your team, but also your sales strategy, and that's a different ball game.",
+      "snippet": "Hiring two more engineers and a Head of Sales simultaneously suggests you're scaling up your sales team to match your rapidly growing product side.",
       "error": null
     },
     {
@@ -197,38 +196,34 @@
       "postsExtracted": 2,
       "aggregated": {
         "topSignals": [
-          "fundraising",
           "celebrating_win"
         ],
         "topTopics": [
           "outbound sales",
           "prospect research",
-          "email marketing"
+          "personalization"
         ],
-        "dominantTone": "reflective",
+        "dominantTone": "excited",
         "anchor": {
           "post": {
-            "id": "li-7298775432109876543",
-            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876543",
-            "text": "Our outbound numbers in Q1 were embarrassing. 0.4% reply rate. Spent the last six weeks rebuilding our process around prospect research — every email has to reference something the recipient said publicly in the last 30 days. Reply rate is now 6.8%. Personalization is not a feature, it's the whole thing.",
-            "createdAt": "2026-05-17T14:22:00Z",
+            "id": "li-7298775432109876544",
+            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876544",
+            "text": "Closed our second enterprise contract this month. Both deals came from outbound — both required four months of nurture. Anyone telling you outbound is dead is selling something. It works. It just takes patience and craft.",
+            "createdAt": "2026-05-21T11:00:00Z",
             "authorHandle": "sam-rivers"
           },
           "signals": {
             "intentSignals": [
-              "fundraising",
-              "none"
+              "celebrating_win"
             ],
             "topics": [
-              "outbound sales",
-              "prospect research",
-              "email marketing"
+              "outbound sales"
             ],
-            "tone": "reflective"
+            "tone": "excited"
           }
         }
       },
-      "snippet": "You spent six weeks rebuilding your outbound process around prospect research but still can't scale past a single person's human volume.",
+      "snippet": "Shutting down claims that outbound is dead after two successful enterprise deals within a month suggests patience and craft are indeed key.",
       "error": null
     },
     {
@@ -249,9 +244,9 @@
         "topTopics": [
           "devops",
           "travel",
-          "productivity",
           "npm",
-          "github actions"
+          "github actions",
+          "security"
         ],
         "dominantTone": "excited",
         "anchor": {
@@ -274,7 +269,7 @@
           }
         }
       },
-      "snippet": "Cutting deploy time from 40 minutes to 4 after inheriting that pipeline isn't an optimization — it's a different job.",
+      "snippet": "You're now adding verification criteria to your specs, which sounds like an important step towards automating some of your DevOps workflows.",
       "error": null
     }
   ]
