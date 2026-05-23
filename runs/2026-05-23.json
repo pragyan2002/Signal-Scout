@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T12:54:09.666Z",
+  "generatedAt": "2026-05-23T14:43:17.430Z",
   "model": "llama-3.3-70b-versatile",
   "results": [
     {
@@ -19,8 +19,8 @@
         ],
         "topTopics": [
           "outbound sales",
-          "fundraising",
           "venture capital",
+          "seed round",
           "b2b saas",
           "ai"
         ],
@@ -38,14 +38,14 @@
               "fundraising"
             ],
             "topics": [
-              "fundraising",
-              "venture capital"
+              "venture capital",
+              "seed round"
             ],
             "tone": "celebratory"
           }
         }
       },
-      "snippet": "Closing a seed round likely brings a mix of relief and new pressure to deliver.",
+      "snippet": "Closing a seed round with a mix of VC and operator investors is a unique blend of financial and strategic support.",
       "error": null
     },
     {
@@ -67,8 +67,8 @@
           "devops",
           "alert fatigue",
           "customer acquisition",
-          "growth hacking",
-          "outbound sales"
+          "hacker news",
+          "growth hacking"
         ],
         "dominantTone": "celebratory",
         "anchor": {
@@ -92,7 +92,7 @@
           }
         }
       },
-      "snippet": "Building an outbound process with just a Postgres connection suggests a very hands-on approach to sales.",
+      "snippet": "Evaluating outbound tools designed for larger teams must be frustrating with just a Postgres connection to rely on.",
       "error": null
     },
     {
@@ -158,7 +158,7 @@
           "financial software",
           "accounting",
           "sales hiring",
-          "gtm strategy",
+          "series a",
           "customer_support"
         ],
         "dominantTone": "excited",
@@ -177,13 +177,13 @@
             ],
             "topics": [
               "sales hiring",
-              "gtm strategy"
+              "series a"
             ],
             "tone": "excited"
           }
         }
       },
-      "snippet": "Doubling the team in a month suggests a very aggressive growth timeline.",
+      "snippet": "Doubling the team after a Series A close suggests scaling the organization is a top priority right now.",
       "error": null
     },
     {
@@ -243,7 +243,7 @@
         "topSignals": [
           "celebrating_win",
           "tool_complaint",
-          "sharing_learning"
+          "seeking_advice"
         ],
         "topTopics": [
           "travel",
@@ -273,7 +273,7 @@
           }
         }
       },
-      "snippet": "Experiencing an audio interface for the first time can be surreal.",
+      "snippet": "Using an audio interface for the first time can be surreal, especially when it feels like something out of science fiction.",
       "error": null
     }
   ]
