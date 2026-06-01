@@ -34,5 +34,29 @@
     "displayName": "Paul Frazee",
     "platform": "bluesky",
     "profileUrl": "https://bsky.app/profile/pfrazee.com"
+  },
+  {
+    "handle": "jay.bsky.team",
+    "displayName": "Jay Graber",
+    "platform": "bluesky",
+    "profileUrl": "https://bsky.app/profile/jay.bsky.team"
+  },
+  {
+    "handle": "danabra.mov",
+    "displayName": "Dan Abramov",
+    "platform": "bluesky",
+    "profileUrl": "https://bsky.app/profile/danabra.mov"
+  },
+  {
+    "handle": "bnewbold.net",
+    "displayName": "Bryan Newbold",
+    "platform": "bluesky",
+    "profileUrl": "https://bsky.app/profile/bnewbold.net"
+  },
+  {
+    "handle": "why.bsky.team",
+    "displayName": "Aaron Rodericks",
+    "platform": "bluesky",
+    "profileUrl": "https://bsky.app/profile/why.bsky.team"
   }
 ]
