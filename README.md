@@ -22,6 +22,21 @@ This repo is a small, end-to-end demo of that loop: monitor prospects, extract
 intent signals from their recent activity, and generate one grounded outbound
 opener per prospect. It runs in a single command.
 
+## Live dashboard
+
+A hosted, static dashboard renders the full run history — every prospect, the
+signal that was extracted, the anchor post, and the generated opener as a
+"what they posted → your opener" before/after:
+
+**→ https://pragyan2002.github.io/signal-scout/**
+
+The dashboard is a single self-contained HTML file built from the committed
+`runs/*.json` (no backend, no API keys at view-time, no database). The daily
+GitHub Actions run commits a fresh run and the dashboard auto-redeploys, so the
+hosted page always reflects the latest scan of live Bluesky accounts. Build it
+locally with `npm run build:site` (writes `dist/index.html` — open it directly,
+it works from `file://`).
+
 ## What it does
 
 ```
