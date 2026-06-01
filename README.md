@@ -30,6 +30,8 @@ signal that was extracted, the anchor post, and the generated opener as a
 
 **→ https://pragyan2002.github.io/signal-scout/**
 
+![Signal Scout dashboard — run-history timeline and per-prospect cards showing the anchor post and the generated opener](dashboard.png)
+
 The dashboard is a single self-contained HTML file built from the committed
 `runs/*.json` (no backend, no API keys at view-time, no database). The daily
 GitHub Actions run commits a fresh run and the dashboard auto-redeploys, so the
