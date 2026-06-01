@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T14:02:16.464Z",
+  "generatedAt": "2026-06-01T19:29:32.559Z",
   "model": "llama-3.3-70b-versatile",
   "results": [
     {
@@ -24,7 +24,7 @@
           "b2b saas",
           "ai"
         ],
-        "dominantTone": "excited",
+        "dominantTone": "celebratory",
         "anchor": {
           "post": {
             "id": "1789012345678901234",
@@ -41,11 +41,11 @@
               "venture capital",
               "seed round"
             ],
-            "tone": "excited"
+            "tone": "celebratory"
           }
         }
       },
-      "snippet": "Closing a seed round with operators you've learned from implies you're valuing their judgment alongside the capital.",
+      "snippet": "Raising a seed round with operators you've learned from implies you value their judgment.",
       "error": null
     },
     {
@@ -67,8 +67,8 @@
           "devops",
           "alert fatigue",
           "customer acquisition",
-          "hacker news",
-          "growth strategy"
+          "growth hacking",
+          "outbound sales"
         ],
         "dominantTone": "celebratory",
         "anchor": {
@@ -92,7 +92,7 @@
           }
         }
       },
-      "snippet": "Having to DIY outbound with just a Postgres connection implies a very different scale of operations.",
+      "snippet": "Having to build an outbound process from scratch with just a Postgres connection implies a lot of manual work.",
       "error": null
     },
     {
@@ -137,7 +137,7 @@
           }
         }
       },
-      "snippet": "Evaluating six tools in two weeks implies the current solutions are interchangeable to you.",
+      "snippet": "Evaluating six tools in two weeks and still getting template-sounding emails implies the vendors aren't actually solving the personalization problem.",
       "error": null
     },
     {
@@ -160,7 +160,7 @@
           "accounting automation",
           "sales hiring",
           "series a",
-          "gtm"
+          "customer_support"
         ],
         "dominantTone": "excited",
         "anchor": {
@@ -178,14 +178,13 @@
             ],
             "topics": [
               "sales hiring",
-              "series a",
-              "gtm"
+              "series a"
             ],
             "tone": "excited"
           }
         }
       },
-      "snippet": "Doubling the team and waiting on a single GTM hire implies that role is make-or-break for the company's growth trajectory.",
+      "snippet": "Doubling the team after a Series A close implies that scaling sales motion is now a pressing priority.",
       "error": null
     },
     {
@@ -229,7 +228,7 @@
           }
         }
       },
-      "snippet": "Four months of nurture for each deal implies that outbound success is more about persistence than pitch perfection.",
+      "snippet": "Four months of nurture for each deal implies that the actual work in outbound is often in the waiting, not the messaging.",
       "error": null
     },
     {
@@ -243,18 +242,18 @@
       "postsExtracted": 15,
       "aggregated": {
         "topSignals": [
-          "seeking_advice",
           "celebrating_win",
-          "launching"
+          "launching",
+          "tool_complaint"
         ],
         "topTopics": [
           "rust programming",
+          "autocoder",
           "social media",
-          "linkedin",
-          "boston sports",
-          "ai"
+          "ai correctness",
+          "linkedin"
         ],
-        "dominantTone": "excited",
+        "dominantTone": "analytical",
         "anchor": {
           "post": {
             "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mms3q7hxqc2j",
@@ -275,7 +274,7 @@
           }
         }
       },
-      "snippet": "Rust compilation speed issues are still a daily frustration for you.",
+      "snippet": "Rust compilation speed seems to be a quiet frustration for you.",
       "error": null
     },
     {
@@ -299,7 +298,7 @@
         "displayName": "Dan Abramov"
       },
       "postsFetched": 24,
-      "postsExtracted": 24,
+      "postsExtracted": 22,
       "aggregated": {
         "topSignals": [
           "seeking_advice",
@@ -308,8 +307,8 @@
         ],
         "topTopics": [
           "quantum mechanics",
-          "language learning",
           "ai",
+          "language learning",
           "ai learning",
           "japanese language"
         ],
@@ -334,7 +333,7 @@
           }
         }
       },
-      "snippet": "The webview redirect being slower than expected implies the integration's polish is at odds with its intended convenience.",
+      "snippet": null,
       "error": null
     },
     {
@@ -345,27 +344,26 @@
         "displayName": "Bryan Newbold"
       },
       "postsFetched": 7,
-      "postsExtracted": 7,
+      "postsExtracted": 3,
       "aggregated": {
         "topSignals": [
-          "tool_complaint",
           "celebrating_win",
-          "sharing_learning"
+          "tool_complaint"
         ],
         "topTopics": [
-          "bulk import",
-          "rate limits",
-          "pds",
           "dns registrar",
-          "atproto"
+          "atproto",
+          "web development",
+          "network issues",
+          "akamai"
         ],
-        "dominantTone": "analytical",
+        "dominantTone": "celebratory",
         "anchor": {
           "post": {
-            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mn65qfg3ns2k",
-            "url": "https://bsky.app/profile/bnewbold.net/post/3mn65qfg3ns2k",
-            "text": "a little atproto bulk import hack:\n\nPDS instances have record operation rate-limits (for good reasons!) which can make bulk import of thousands of records all at one tricky. eg, \"import your old insta posts\".",
-            "createdAt": "2026-05-31T18:05:35.676Z",
+            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mmaaedolzk2k",
+            "url": "https://bsky.app/profile/bnewbold.net/post/3mmaaedolzk2k",
+            "text": "from home, on my daily debian laptop, I can't browse most of costco.com or asics.com without getting Akamai (errors.edgesuite.net) Access Denied errors.\n\nnot doing weird bulk dev requests these days, and works fine from apple laptops or android phones.\n\nI assume this is anti-bot stuff?",
+            "createdAt": "2026-05-19T20:32:40.277Z",
             "authorHandle": "bnewbold.net"
           },
           "signals": {
@@ -373,15 +371,15 @@
               "tool_complaint"
             ],
             "topics": [
-              "bulk import",
-              "rate limits",
-              "pds"
+              "web development",
+              "network issues",
+              "akamai"
             ],
-            "tone": "analytical"
+            "tone": "frustrated"
           }
         }
       },
-      "snippet": "Hitting rate limits on bulk import suggests your PDS instances are designed to prioritize data integrity over convenience.",
+      "snippet": null,
       "error": null
     },
     {
@@ -391,24 +389,24 @@
         "profileUrl": "https://bsky.app/profile/why.bsky.team",
         "displayName": "Aaron Rodericks"
       },
-      "postsFetched": 8,
-      "postsExtracted": 8,
+      "postsFetched": 7,
+      "postsExtracted": 2,
       "aggregated": {
         "topSignals": [],
         "topTopics": [
-          "seattle",
-          "food",
-          "travel",
-          "coffee",
-          "machine learning"
+          "machine learning",
+          "rust",
+          "programming languages",
+          "frisbee golf",
+          "wordplay"
         ],
-        "dominantTone": "excited",
+        "dominantTone": "analytical",
         "anchor": {
           "post": {
-            "id": "at://did:plc:vpkhqolt662uhesyj6nxm7ys/app.bsky.feed.post/3mn27dlwovc2d",
-            "url": "https://bsky.app/profile/why.bsky.team/post/3mn27dlwovc2d",
-            "text": "Overhearing “the thing I love about Seattle is you guys have really great coffee” and getting mad because he probably went to [place I dont like] and not [place I like]",
-            "createdAt": "2026-05-30T04:23:34.834Z",
+            "id": "at://did:plc:vpkhqolt662uhesyj6nxm7ys/app.bsky.feed.post/3mmxbp4gja222",
+            "url": "https://bsky.app/profile/why.bsky.team/post/3mmxbp4gja222",
+            "text": "Okay for as much as I rag on Rust, if you’re going to rewrite an entire ML training stack from the ground up I can’t say that I would reach for C…",
+            "createdAt": "2026-05-29T00:27:49.496Z",
             "authorHandle": "why.bsky.team"
           },
           "signals": {
@@ -416,14 +414,15 @@
               "none"
             ],
             "topics": [
-              "coffee",
-              "seattle"
+              "machine learning",
+              "rust",
+              "programming languages"
             ],
-            "tone": "frustrated"
+            "tone": "analytical"
           }
         }
       },
-      "snippet": "Getting defensive about someone's coffee preferences implies a strong loyalty to local spots.",
+      "snippet": null,
       "error": null
     }
   ]
