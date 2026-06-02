@@ -16,7 +16,7 @@ import { aggregate } from './snippet/aggregate.js';
 import { renderTable } from './render/table.js';
 import { writeJsonOutput } from './render/json.js';
 import { loadEnv } from './util/env.js';
-import { RECENCY_WINDOW_DAYS } from './util/constants.js';
+import { RECENCY_WINDOW_DAYS, MAX_POSTS_PER_PROSPECT } from './util/constants.js';
 
 const SINCE_DAYS = RECENCY_WINDOW_DAYS;
 const ROOT = process.cwd();
@@ -101,7 +101,12 @@ async function main(): Promise<void> {
       chalk.dim(`  → ${source.name} fetching @${prospect.handle} (${prospect.platform})`),
     );
     try {
-      const posts = await source.fetchRecentPosts(prospect, SINCE_DAYS);
+      const fetched = await source.fetchRecentPosts(prospect, SINCE_DAYS);
+      // Cap to the most recent N posts to keep LLM call volume (and rate-limit
+      // exposure) bounded for prolific accounts.
+      const posts = [...fetched]
+        .sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
+        .slice(0, MAX_POSTS_PER_PROSPECT);
       if (posts.length === 0) {
         console.log(chalk.dim(`    (no posts in last ${SINCE_DAYS} days)`));
         results.push({
@@ -113,7 +118,8 @@ async function main(): Promise<void> {
         });
         continue;
       }
-      console.log(chalk.dim(`    fetched ${posts.length} posts, extracting…`));
+      const capNote = fetched.length > posts.length ? ` (capped from ${fetched.length})` : '';
+      console.log(chalk.dim(`    fetched ${posts.length} posts${capNote}, extracting…`));
       const result = await processProspect({
         prospect,
         posts,

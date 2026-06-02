@@ -46,11 +46,10 @@ jobs:
       - name: Build dashboard
         run: npm run build:site
 
+      # Pages must be enabled once manually: repo Settings → Pages →
+      # Build and deployment → Source = "GitHub Actions". The default
+      # GITHUB_TOKEN cannot create the Pages site via the API.
       - uses: actions/configure-pages@v5
-        with:
-          # Create/enable the Pages site on first run so no manual
-          # Settings → Pages toggle is needed (requires pages: write, set above).
-          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
