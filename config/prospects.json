@@ -1,35 +1,5 @@
 [
   {
-    "handle": "ada_founder",
-    "displayName": "Ada Reyes",
-    "platform": "twitter",
-    "profileUrl": "https://twitter.com/ada_founder"
-  },
-  {
-    "handle": "marcus_builds",
-    "displayName": "Marcus Okafor",
-    "platform": "twitter",
-    "profileUrl": "https://twitter.com/marcus_builds"
-  },
-  {
-    "handle": "priya_ships",
-    "displayName": "Priya Shah",
-    "platform": "twitter",
-    "profileUrl": "https://twitter.com/priya_ships"
-  },
-  {
-    "handle": "jordan-chen",
-    "displayName": "Jordan Chen",
-    "platform": "linkedin",
-    "profileUrl": "https://www.linkedin.com/in/jordan-chen"
-  },
-  {
-    "handle": "sam-rivers",
-    "displayName": "Sam Rivers",
-    "platform": "linkedin",
-    "profileUrl": "https://www.linkedin.com/in/sam-rivers"
-  },
-  {
     "handle": "pfrazee.com",
     "displayName": "Paul Frazee",
     "platform": "bluesky",
@@ -58,5 +28,35 @@
     "displayName": "Aaron Rodericks",
     "platform": "bluesky",
     "profileUrl": "https://bsky.app/profile/why.bsky.team"
+  },
+  {
+    "handle": "ada_founder",
+    "displayName": "Ada Reyes",
+    "platform": "twitter",
+    "profileUrl": "https://twitter.com/ada_founder"
+  },
+  {
+    "handle": "marcus_builds",
+    "displayName": "Marcus Okafor",
+    "platform": "twitter",
+    "profileUrl": "https://twitter.com/marcus_builds"
+  },
+  {
+    "handle": "priya_ships",
+    "displayName": "Priya Shah",
+    "platform": "twitter",
+    "profileUrl": "https://twitter.com/priya_ships"
+  },
+  {
+    "handle": "jordan-chen",
+    "displayName": "Jordan Chen",
+    "platform": "linkedin",
+    "profileUrl": "https://www.linkedin.com/in/jordan-chen"
+  },
+  {
+    "handle": "sam-rivers",
+    "displayName": "Sam Rivers",
+    "platform": "linkedin",
+    "profileUrl": "https://www.linkedin.com/in/sam-rivers"
   }
 ]
