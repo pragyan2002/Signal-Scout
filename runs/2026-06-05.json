@@ -1,0 +1,420 @@
+{
+  "generatedAt": "2026-06-05T16:06:36.994Z",
+  "model": "llama-3.3-70b-versatile",
+  "results": [
+    {
+      "prospect": {
+        "handle": "pfrazee.com",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/pfrazee.com",
+        "displayName": "Paul Frazee"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "hiring",
+          "tool_complaint",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "ai",
+          "company culture",
+          "onboarding",
+          "debugging",
+          "coding issues"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mndvnsemxs2d",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3mndvnsemxs2d",
+            "text": "reply to every email with \"I did not give you permission to send this\" and then if they apologize and ask for permission get even madder for the second unpermitted email",
+            "createdAt": "2026-06-03T00:56:57.091Z",
+            "authorHandle": "pfrazee.com"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "email management",
+              "spam filtering"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Simulating outrage over unpermitted emails reveals a deep frustration with automated messaging.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "danabra.mov",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/danabra.mov",
+        "displayName": "Dan Abramov"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "sharing_learning",
+          "seeking_advice"
+        ],
+        "topTopics": [
+          "physics",
+          "classical physics",
+          "opus",
+          "software issues",
+          "education"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:fpruhuo22xkm5o7ttr2ktxdo/app.bsky.feed.post/3mnkdnx3t4c2n",
+            "url": "https://bsky.app/profile/danabra.mov/post/3mnkdnx3t4c2n",
+            "text": "i keep running into opus wanting to randomly invoke tools, has anyone seen this? seems maybe new in 4.8\n\nit tries to get current time, look for past convos, sometimes displays image search inline without me asking etc",
+            "createdAt": "2026-06-05T14:23:32.861Z",
+            "authorHandle": "danabra.mov"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "opus",
+              "software issues"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Opus invoking tools without being asked implies a loss of control over the workflow.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "bnewbold.net",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/bnewbold.net",
+        "displayName": "Bryan Newbold"
+      },
+      "postsFetched": 7,
+      "postsExtracted": 7,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "atproto",
+          "ietf",
+          "github",
+          "bulk import",
+          "rate limits"
+        ],
+        "dominantTone": "analytical",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mn65qfg3ns2k",
+            "url": "https://bsky.app/profile/bnewbold.net/post/3mn65qfg3ns2k",
+            "text": "a little atproto bulk import hack:\n\nPDS instances have record operation rate-limits (for good reasons!) which can make bulk import of thousands of records all at one tricky. eg, \"import your old insta posts\".",
+            "createdAt": "2026-05-31T18:05:35.676Z",
+            "authorHandle": "bnewbold.net"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "bulk import",
+              "rate limits",
+              "pds"
+            ],
+            "tone": "analytical"
+          }
+        }
+      },
+      "snippet": "Hitting rate limits on bulk imports implies a scalability issue with the current atproto setup.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "why.bsky.team",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/why.bsky.team",
+        "displayName": "Aaron Rodericks"
+      },
+      "postsFetched": 9,
+      "postsExtracted": 9,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "seattle",
+          "gaming",
+          "music",
+          "ai",
+          "language models"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:vpkhqolt662uhesyj6nxm7ys/app.bsky.feed.post/3mnicjnn6t22o",
+            "url": "https://bsky.app/profile/why.bsky.team/post/3mnicjnn6t22o",
+            "text": "Anthropic probably needs to reign in their \"working\" verbs in Claude Code a bit, at no point do I want to know that Claude is \"Slithering\". No basilisk behavior from the little shoggoth please.",
+            "createdAt": "2026-06-04T18:57:55.508Z",
+            "authorHandle": "why.bsky.team"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "ai",
+              "language models",
+              "ux"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Getting hung up on a single verb choice in a language model's output implies a high bar for tone and personality in AI-generated content.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "ada_founder",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/ada_founder",
+        "displayName": "Ada Reyes"
+      },
+      "postsFetched": 4,
+      "postsExtracted": 4,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "hiring",
+          "fundraising"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "customer_validation",
+          "book_review",
+          "ai",
+          "b2b saas"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "1789012345678901234",
+            "url": "https://twitter.com/ada_founder/status/1789012345678901234",
+            "text": "We just closed our seed round. $4.2M led by Initialized with participation from a bunch of operators we've been learning from for years. Wild day. Now the actual work starts.",
+            "createdAt": "2026-05-19T15:42:00Z",
+            "authorHandle": "ada_founder"
+          },
+          "signals": {
+            "intentSignals": [
+              "fundraising"
+            ],
+            "topics": [
+              "venture capital",
+              "seed round"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Raising a seed round with operators who are also mentors implies a desire for guidance beyond just capital.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "marcus_builds",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/marcus_builds",
+        "displayName": "Marcus Okafor"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "seeking_advice",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales tools",
+          "customer acquisition",
+          "growth hacking",
+          "devops"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "1789022345678901236",
+            "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
+            "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
+            "createdAt": "2026-05-23T11:48:00Z",
+            "authorHandle": "marcus_builds"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint",
+              "seeking_advice"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Having to do outbound sales alone with just a Postgres connection implies a lot of manual workarounds.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "priya_ships",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/priya_ships",
+        "displayName": "Priya Shah"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "hiring",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales hiring",
+          "customer_acquisition",
+          "infrastructure",
+          "sales tools"
+        ],
+        "dominantTone": "neutral",
+        "anchor": {
+          "post": {
+            "id": "1789032345678901234",
+            "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+            "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+            "createdAt": "2026-05-15T18:22:00Z",
+            "authorHandle": "priya_ships"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Two weeks of evaluating outbound tools and they all sounded like templates.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "jordan-chen",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/jordan-chen",
+        "displayName": "Jordan Chen"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "launching",
+          "sharing_learning",
+          "hiring"
+        ],
+        "topTopics": [
+          "financial software",
+          "accounting automation",
+          "customer_support",
+          "growth_strategy",
+          "sales hiring"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "li-7298765432109876544",
+            "url": "https://www.linkedin.com/posts/jordan-chen-activity-7298765432109876544",
+            "text": "Hiring two more engineers and our first Head of Sales. Series A closed last month, team is doubling, the only thing holding us back from a real GTM motion is the GTM hire. If you know someone strong, please introduce us.",
+            "createdAt": "2026-05-20T09:30:00Z",
+            "authorHandle": "jordan-chen"
+          },
+          "signals": {
+            "intentSignals": [
+              "hiring",
+              "fundraising"
+            ],
+            "topics": [
+              "sales hiring",
+              "series a",
+              "gtm"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Doubling the team and waiting on a single GTM hire implies that role is make-or-break for the next phase.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "sam-rivers",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/sam-rivers",
+        "displayName": "Sam Rivers"
+      },
+      "postsFetched": 2,
+      "postsExtracted": 2,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "enterprise contracts",
+          "prospect research",
+          "personalization"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "li-7298775432109876544",
+            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876544",
+            "text": "Closed our second enterprise contract this month. Both deals came from outbound — both required four months of nurture. Anyone telling you outbound is dead is selling something. It works. It just takes patience and craft.",
+            "createdAt": "2026-05-21T11:00:00Z",
+            "authorHandle": "sam-rivers"
+          },
+          "signals": {
+            "intentSignals": [
+              "celebrating_win"
+            ],
+            "topics": [
+              "outbound sales",
+              "enterprise contracts"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Four months of nurture for each deal implies that the actual work in outbound is often in the waiting, not the emailing.",
+      "error": null
+    }
+  ]
+}
