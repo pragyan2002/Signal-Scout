@@ -1,0 +1,412 @@
+{
+  "generatedAt": "2026-06-11T17:00:33.496Z",
+  "model": "llama-3.3-70b-versatile",
+  "results": [
+    {
+      "prospect": {
+        "handle": "pfrazee.com",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/pfrazee.com",
+        "displayName": "Paul Frazee"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "event_invitations",
+          "social_media",
+          "erlang",
+          "programming languages",
+          "agi"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mnx76t5cbk27",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3mnx76t5cbk27",
+            "text": "Relatedly I think the people who make the \"Always allow\" button are the same people who make the \"Stay logged in\" button",
+            "createdAt": "2026-06-10T17:08:07.031Z",
+            "authorHandle": "pfrazee.com"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "security",
+              "ux design"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Equating \"Always allow\" with \"Stay logged in\" buttons implies a skepticism about defaults that prioritize convenience over user control.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "danabra.mov",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/danabra.mov",
+        "displayName": "Dan Abramov"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "launching"
+        ],
+        "topTopics": [
+          "outage",
+          "infrastructure",
+          "new product",
+          "version control",
+          "git"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:fpruhuo22xkm5o7ttr2ktxdo/app.bsky.feed.post/3mnv6hgbj722y",
+            "url": "https://bsky.app/profile/danabra.mov/post/3mnv6hgbj722y",
+            "text": "oops looks like firehose ingester in sidetrail.app has been down since february. explains why no one's posting new trails",
+            "createdAt": "2026-06-09T21:49:42.308Z",
+            "authorHandle": "danabra.mov"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "sidetrail.app",
+              "data ingestion"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "A months-long outage of a key component like firehose ingester implies a monitoring blindspot.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "bnewbold.net",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/bnewbold.net",
+        "displayName": "Bryan Newbold"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "atproto",
+          "movies",
+          "http",
+          "privacy",
+          "pseudonymity"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mn64wju4sk2o",
+            "url": "https://bsky.app/profile/bnewbold.net/post/3mn64wju4sk2o",
+            "text": "marque.at is a slick DNS registrar with atproto integrations built in. I've registered a few domains there and endorse it!",
+            "createdAt": "2026-05-31T17:51:07.914Z",
+            "authorHandle": "bnewbold.net"
+          },
+          "signals": {
+            "intentSignals": [
+              "celebrating_win"
+            ],
+            "topics": [
+              "dns registrar",
+              "atproto"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Registering multiple domains with a registrar that has atproto integrations implies a deliberate tech stack choice.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "why.bsky.team",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/why.bsky.team",
+        "displayName": "Aaron Rodericks"
+      },
+      "postsFetched": 10,
+      "postsExtracted": 10,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "rust",
+          "procedural generation",
+          "city sim",
+          "game development",
+          "ai development"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:vpkhqolt662uhesyj6nxm7ys/app.bsky.feed.post/3mnicjnn6t22o",
+            "url": "https://bsky.app/profile/why.bsky.team/post/3mnicjnn6t22o",
+            "text": "Anthropic probably needs to reign in their \"working\" verbs in Claude Code a bit, at no point do I want to know that Claude is \"Slithering\". No basilisk behavior from the little shoggoth please.",
+            "createdAt": "2026-06-04T18:57:55.508Z",
+            "authorHandle": "why.bsky.team"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "ai",
+              "language models"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Complaining about Anthropic's verb choices implies you have a strong sense of tone in AI interactions.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "ada_founder",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/ada_founder",
+        "displayName": "Ada Reyes"
+      },
+      "postsFetched": 4,
+      "postsExtracted": 4,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "hiring",
+          "fundraising"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "customer_validation",
+          "book_review",
+          "ai",
+          "b2b saas"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "1789012345678901234",
+            "url": "https://twitter.com/ada_founder/status/1789012345678901234",
+            "text": "We just closed our seed round. $4.2M led by Initialized with participation from a bunch of operators we've been learning from for years. Wild day. Now the actual work starts.",
+            "createdAt": "2026-05-19T15:42:00Z",
+            "authorHandle": "ada_founder"
+          },
+          "signals": {
+            "intentSignals": [
+              "fundraising"
+            ],
+            "topics": [
+              "venture capital",
+              "seed round"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Closing a seed round with investors you've learned from implies a high value on their strategic guidance.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "marcus_builds",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/marcus_builds",
+        "displayName": "Marcus Okafor"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "seeking_advice",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales tools",
+          "customer acquisition",
+          "growth hacking",
+          "devops"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "1789022345678901236",
+            "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
+            "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
+            "createdAt": "2026-05-23T11:48:00Z",
+            "authorHandle": "marcus_builds"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint",
+              "seeking_advice"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Having to manually use a Postgres connection for outbound likely means automation tools are overengineered for your current needs.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "priya_ships",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/priya_ships",
+        "displayName": "Priya Shah"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "hiring",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales hiring",
+          "infrastructure",
+          "sales tools"
+        ],
+        "dominantTone": "neutral",
+        "anchor": {
+          "post": {
+            "id": "1789032345678901234",
+            "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+            "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+            "createdAt": "2026-05-15T18:22:00Z",
+            "authorHandle": "priya_ships"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Evaluating six tools in two weeks implies the current options are interchangeable, not differentiated by results.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "jordan-chen",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/jordan-chen",
+        "displayName": "Jordan Chen"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "launching",
+          "sharing_learning",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "financial software",
+          "accounting automation",
+          "customer_support",
+          "growth_strategy",
+          "sales hiring"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "li-7298765432109876544",
+            "url": "https://www.linkedin.com/posts/jordan-chen-activity-7298765432109876544",
+            "text": "Hiring two more engineers and our first Head of Sales. Series A closed last month, team is doubling, the only thing holding us back from a real GTM motion is the GTM hire. If you know someone strong, please introduce us.",
+            "createdAt": "2026-05-20T09:30:00Z",
+            "authorHandle": "jordan-chen"
+          },
+          "signals": {
+            "intentSignals": [
+              "hiring",
+              "fundraising"
+            ],
+            "topics": [
+              "sales hiring",
+              "series a",
+              "gtm"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Doubling the team and waiting on a single GTM hire implies the rest of the growth strategy is already in place.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "sam-rivers",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/sam-rivers",
+        "displayName": "Sam Rivers"
+      },
+      "postsFetched": 2,
+      "postsExtracted": 2,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "enterprise contracts",
+          "prospect research",
+          "personalization"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "li-7298775432109876544",
+            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876544",
+            "text": "Closed our second enterprise contract this month. Both deals came from outbound — both required four months of nurture. Anyone telling you outbound is dead is selling something. It works. It just takes patience and craft.",
+            "createdAt": "2026-05-21T11:00:00Z",
+            "authorHandle": "sam-rivers"
+          },
+          "signals": {
+            "intentSignals": [
+              "celebrating_win"
+            ],
+            "topics": [
+              "outbound sales",
+              "enterprise contracts"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Four months of nurture for each deal implies that the conversations you're starting are more important than the emails you're sending.",
+      "error": null
+    }
+  ]
+}
