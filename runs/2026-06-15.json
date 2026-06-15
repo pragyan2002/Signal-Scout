@@ -1,0 +1,416 @@
+{
+  "generatedAt": "2026-06-15T17:59:13.082Z",
+  "model": "llama-3.3-70b-versatile",
+  "results": [
+    {
+      "prospect": {
+        "handle": "pfrazee.com",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/pfrazee.com",
+        "displayName": "Paul Frazee"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "seeking_advice",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "seattle",
+          "project glasswing",
+          "sports",
+          "wedding planning",
+          "open networks"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mo4hotmbgk2u",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3mo4hotmbgk2u",
+            "text": "I'll just comment on my impressions of their conclusions in a thread here. Worth sharing how I see it unfolding internally.\n\n(I signed up for their email spam to read this so yes, I am a hero.)",
+            "createdAt": "2026-06-12T19:23:33.017Z",
+            "authorHandle": "pfrazee.com"
+          },
+          "signals": {
+            "intentSignals": [
+              "sharing_learning"
+            ],
+            "topics": [
+              "industry_insights",
+              "email_marketing"
+            ],
+            "tone": "analytical"
+          }
+        }
+      },
+      "snippet": "Signing up for email spam to read a report implies a strong desire for information.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "danabra.mov",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/danabra.mov",
+        "displayName": "Dan Abramov"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "launching",
+          "seeking_advice"
+        ],
+        "topTopics": [
+          "game mechanics",
+          "gaming",
+          "content creation",
+          "online etiquette",
+          "music"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:fpruhuo22xkm5o7ttr2ktxdo/app.bsky.feed.post/3mobrnro7h22x",
+            "url": "https://bsky.app/profile/danabra.mov/post/3mobrnro7h22x",
+            "text": "lie: reunion was … meh\n\ni actually didn’t mind the retcon or even that it undermines the first game’s ending. and the story was fine too\n\nto me it’s mostly the game mechanics that sucked. time travel mechanic didn’t feel consequential throughout the game. something about first game was different",
+            "createdAt": "2026-06-14T22:05:13.541Z",
+            "authorHandle": "danabra.mov"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "game mechanics",
+              "gaming"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Focusing on game mechanics as the main letdown implies the story and setting were just a backdrop for the real experience.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "bnewbold.net",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/bnewbold.net",
+        "displayName": "Bryan Newbold"
+      },
+      "postsFetched": 9,
+      "postsExtracted": 9,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "movies",
+          "http",
+          "privacy",
+          "pseudonymity",
+          "api design"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mnpvi2xwpk2v",
+            "url": "https://bsky.app/profile/bnewbold.net/post/3mnpvi2xwpk2v",
+            "text": "💭 Oblivious HTTP is interesting! \n\nthe stated use cases are anonymous/stateless, and in atproto this could help with client privacy for identity lookups (eg, PLC resolution)\n\nbut seems like it could also help with pseudonymity? eg PLC op submissions.\n\nand even PDS proxying (!)",
+            "createdAt": "2026-06-07T19:25:41.647Z",
+            "authorHandle": "bnewbold.net"
+          },
+          "signals": {
+            "intentSignals": [
+              "sharing_learning"
+            ],
+            "topics": [
+              "http",
+              "privacy",
+              "pseudonymity"
+            ],
+            "tone": "analytical"
+          }
+        }
+      },
+      "snippet": "Exploring Oblivious HTTP for pseudonymity use cases implies a deeper concern with identity and privacy in your protocol design.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "why.bsky.team",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/why.bsky.team",
+        "displayName": "Aaron Rodericks"
+      },
+      "postsFetched": 11,
+      "postsExtracted": 11,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "fable",
+          "devops",
+          "incident response",
+          "automation",
+          "cycling"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:vpkhqolt662uhesyj6nxm7ys/app.bsky.feed.post/3mnicjnn6t22o",
+            "url": "https://bsky.app/profile/why.bsky.team/post/3mnicjnn6t22o",
+            "text": "Anthropic probably needs to reign in their \"working\" verbs in Claude Code a bit, at no point do I want to know that Claude is \"Slithering\". No basilisk behavior from the little shoggoth please.",
+            "createdAt": "2026-06-04T18:57:55.508Z",
+            "authorHandle": "why.bsky.team"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "ai",
+              "language models"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Complaining about Anthropic's verb choices implies you have high standards for AI communication tone.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "ada_founder",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/ada_founder",
+        "displayName": "Ada Reyes"
+      },
+      "postsFetched": 4,
+      "postsExtracted": 4,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "hiring",
+          "fundraising"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "customer_validation",
+          "book_review",
+          "ai",
+          "b2b saas"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "1789012345678901234",
+            "url": "https://twitter.com/ada_founder/status/1789012345678901234",
+            "text": "We just closed our seed round. $4.2M led by Initialized with participation from a bunch of operators we've been learning from for years. Wild day. Now the actual work starts.",
+            "createdAt": "2026-05-19T15:42:00Z",
+            "authorHandle": "ada_founder"
+          },
+          "signals": {
+            "intentSignals": [
+              "fundraising"
+            ],
+            "topics": [
+              "venture capital",
+              "seed round"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Raising a seed round with operators you've learned from implies a high bar for strategic guidance.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "marcus_builds",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/marcus_builds",
+        "displayName": "Marcus Okafor"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "seeking_advice",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales tools",
+          "customer acquisition",
+          "growth hacking",
+          "devops"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "1789022345678901236",
+            "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
+            "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
+            "createdAt": "2026-05-23T11:48:00Z",
+            "authorHandle": "marcus_builds"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint",
+              "seeking_advice"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Having to DIY outbound sales with just a Postgres connection implies the current tools aren't built for solo founders.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "priya_ships",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/priya_ships",
+        "displayName": "Priya Shah"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "hiring",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales hiring",
+          "infrastructure",
+          "sales tools"
+        ],
+        "dominantTone": "neutral",
+        "anchor": {
+          "post": {
+            "id": "1789032345678901234",
+            "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+            "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+            "createdAt": "2026-05-15T18:22:00Z",
+            "authorHandle": "priya_ships"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Evaluating six outbound tools in two weeks implies the current options aren't meeting a basic threshold of quality.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "jordan-chen",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/jordan-chen",
+        "displayName": "Jordan Chen"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "launching",
+          "sharing_learning",
+          "hiring"
+        ],
+        "topTopics": [
+          "financial software",
+          "accounting",
+          "customer_support",
+          "growth_strategy",
+          "sales hiring"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "li-7298765432109876544",
+            "url": "https://www.linkedin.com/posts/jordan-chen-activity-7298765432109876544",
+            "text": "Hiring two more engineers and our first Head of Sales. Series A closed last month, team is doubling, the only thing holding us back from a real GTM motion is the GTM hire. If you know someone strong, please introduce us.",
+            "createdAt": "2026-05-20T09:30:00Z",
+            "authorHandle": "jordan-chen"
+          },
+          "signals": {
+            "intentSignals": [
+              "hiring",
+              "fundraising"
+            ],
+            "topics": [
+              "sales hiring",
+              "series a"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "doubling the team and still waiting on one key hire implies the Head of Sales role is a bottleneck.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "sam-rivers",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/sam-rivers",
+        "displayName": "Sam Rivers"
+      },
+      "postsFetched": 2,
+      "postsExtracted": 2,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "enterprise contracts",
+          "prospect research",
+          "personalization"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "li-7298775432109876544",
+            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876544",
+            "text": "Closed our second enterprise contract this month. Both deals came from outbound — both required four months of nurture. Anyone telling you outbound is dead is selling something. It works. It just takes patience and craft.",
+            "createdAt": "2026-05-21T11:00:00Z",
+            "authorHandle": "sam-rivers"
+          },
+          "signals": {
+            "intentSignals": [
+              "celebrating_win"
+            ],
+            "topics": [
+              "outbound sales",
+              "enterprise contracts"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Four months of nurture for each deal implies that the value proposition had to be consistently compelling.",
+      "error": null
+    }
+  ]
+}
