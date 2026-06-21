@@ -1,0 +1,415 @@
+{
+  "generatedAt": "2026-06-21T15:15:03.916Z",
+  "model": "llama-3.3-70b-versatile",
+  "results": [
+    {
+      "prospect": {
+        "handle": "pfrazee.com",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/pfrazee.com",
+        "displayName": "Paul Frazee"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "ai",
+          "travel",
+          "personal time",
+          "team",
+          "colleagues"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3moh3osthdc2t",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3moh3osthdc2t",
+            "text": "I feel like hjson shouldve won instead of yaml",
+            "createdAt": "2026-06-17T00:48:04.425Z",
+            "authorHandle": "pfrazee.com"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "hjson",
+              "yaml",
+              "configuration formats"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Lamenting hjson's loss to yaml implies a strong opinion on data format standards.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "danabra.mov",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/danabra.mov",
+        "displayName": "Dan Abramov"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "social media",
+          "comparisons",
+          "marketing tactics",
+          "cqrs",
+          "fedi"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:fpruhuo22xkm5o7ttr2ktxdo/app.bsky.feed.post/3monkxiqeyk2e",
+            "url": "https://bsky.app/profile/danabra.mov/post/3monkxiqeyk2e",
+            "text": "@tangled.org my blog's deployment just failed with basically no error message. i have no idea how to debug it. gonna have to switch to deployments from github as a result tangled.org/danabra.mov/...",
+            "createdAt": "2026-06-19T14:37:20.385Z",
+            "authorHandle": "danabra.mov"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "blog deployment",
+              "github"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Debugging a failed deployment with no error message is a worst-case scenario for a self-hosted blog.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "bnewbold.net",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/bnewbold.net",
+        "displayName": "Bryan Newbold"
+      },
+      "postsFetched": 6,
+      "postsExtracted": 6,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "uncut gems",
+          "http",
+          "pseudonymity",
+          "client privacy",
+          "api design"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mnpvi2xwpk2v",
+            "url": "https://bsky.app/profile/bnewbold.net/post/3mnpvi2xwpk2v",
+            "text": "💭 Oblivious HTTP is interesting! \n\nthe stated use cases are anonymous/stateless, and in atproto this could help with client privacy for identity lookups (eg, PLC resolution)\n\nbut seems like it could also help with pseudonymity? eg PLC op submissions.\n\nand even PDS proxying (!)",
+            "createdAt": "2026-06-07T19:25:41.647Z",
+            "authorHandle": "bnewbold.net"
+          },
+          "signals": {
+            "intentSignals": [
+              "none"
+            ],
+            "topics": [
+              "http",
+              "pseudonymity",
+              "client privacy"
+            ],
+            "tone": "analytical"
+          }
+        }
+      },
+      "snippet": "Exploring Oblivious HTTP for pseudonymity and PDS proxying implies a deeper concern with identity and privacy in your tech stack.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "why.bsky.team",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/why.bsky.team",
+        "displayName": "Aaron Rodericks"
+      },
+      "postsFetched": 9,
+      "postsExtracted": 9,
+      "aggregated": {
+        "topSignals": [],
+        "topTopics": [
+          "team management",
+          "midjourney",
+          "pivot",
+          "fable",
+          "devops"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:vpkhqolt662uhesyj6nxm7ys/app.bsky.feed.post/3mo4bzas34c2c",
+            "url": "https://bsky.app/profile/why.bsky.team/post/3mo4bzas34c2c",
+            "text": "Had an issue with a project so i pasted the logs into Fable, it noticed the hostname, ssh’ed in, found the tmux the service was running in, updated it, restarted it *in the tmux* and then verified the live system was functioning properly",
+            "createdAt": "2026-06-12T17:41:59.934Z",
+            "authorHandle": "why.bsky.team"
+          },
+          "signals": {
+            "intentSignals": [
+              "none"
+            ],
+            "topics": [
+              "devops",
+              "incident response",
+              "automation"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Using Fable to automatically update and verify a live system suggests a high degree of trust in its automation capabilities.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "ada_founder",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/ada_founder",
+        "displayName": "Ada Reyes"
+      },
+      "postsFetched": 4,
+      "postsExtracted": 4,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "hiring",
+          "fundraising"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "customer_validation",
+          "book_review",
+          "ai",
+          "b2b saas"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "1789012345678901234",
+            "url": "https://twitter.com/ada_founder/status/1789012345678901234",
+            "text": "We just closed our seed round. $4.2M led by Initialized with participation from a bunch of operators we've been learning from for years. Wild day. Now the actual work starts.",
+            "createdAt": "2026-05-19T15:42:00Z",
+            "authorHandle": "ada_founder"
+          },
+          "signals": {
+            "intentSignals": [
+              "fundraising"
+            ],
+            "topics": [
+              "venture capital",
+              "seed round"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Closing a seed round with investors you've learned from implies a high value on mentorship.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "marcus_builds",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/marcus_builds",
+        "displayName": "Marcus Okafor"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "seeking_advice",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales tools",
+          "customer acquisition",
+          "growth hacking",
+          "devops"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "1789022345678901236",
+            "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
+            "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
+            "createdAt": "2026-05-23T11:48:00Z",
+            "authorHandle": "marcus_builds"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint",
+              "seeking_advice"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Having to build outbound sales from scratch with just a Postgres connection implies the available tools aren't designed for solo operators.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "priya_ships",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/priya_ships",
+        "displayName": "Priya Shah"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "hiring",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales hiring",
+          "infra team",
+          "customer acquisition",
+          "sales tools"
+        ],
+        "dominantTone": "neutral",
+        "anchor": {
+          "post": {
+            "id": "1789032345678901234",
+            "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+            "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+            "createdAt": "2026-05-15T18:22:00Z",
+            "authorHandle": "priya_ships"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Evaluating six outbound tools in two weeks implies the current options are fundamentally misaligned with your expectations.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "jordan-chen",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/jordan-chen",
+        "displayName": "Jordan Chen"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "launching",
+          "sharing_learning",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "financial software",
+          "accounting automation",
+          "customer_support",
+          "growth_strategy",
+          "sales hiring"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "li-7298765432109876544",
+            "url": "https://www.linkedin.com/posts/jordan-chen-activity-7298765432109876544",
+            "text": "Hiring two more engineers and our first Head of Sales. Series A closed last month, team is doubling, the only thing holding us back from a real GTM motion is the GTM hire. If you know someone strong, please introduce us.",
+            "createdAt": "2026-05-20T09:30:00Z",
+            "authorHandle": "jordan-chen"
+          },
+          "signals": {
+            "intentSignals": [
+              "hiring",
+              "fundraising"
+            ],
+            "topics": [
+              "sales hiring",
+              "series a"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Doubling the team and waiting on a single GTM hire implies that role is make-or-break for the next phase.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "sam-rivers",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/sam-rivers",
+        "displayName": "Sam Rivers"
+      },
+      "postsFetched": 2,
+      "postsExtracted": 2,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "enterprise contracts",
+          "prospect research",
+          "personalization"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "li-7298775432109876544",
+            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876544",
+            "text": "Closed our second enterprise contract this month. Both deals came from outbound — both required four months of nurture. Anyone telling you outbound is dead is selling something. It works. It just takes patience and craft.",
+            "createdAt": "2026-05-21T11:00:00Z",
+            "authorHandle": "sam-rivers"
+          },
+          "signals": {
+            "intentSignals": [
+              "celebrating_win"
+            ],
+            "topics": [
+              "outbound sales",
+              "enterprise contracts"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Four months of nurture for each deal implies a high cost of manual personalization.",
+      "error": null
+    }
+  ]
+}
