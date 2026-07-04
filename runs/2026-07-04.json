@@ -1,0 +1,419 @@
+{
+  "generatedAt": "2026-07-04T14:43:21.678Z",
+  "model": "llama-3.3-70b-versatile",
+  "results": [
+    {
+      "prospect": {
+        "handle": "pfrazee.com",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/pfrazee.com",
+        "displayName": "Paul Frazee"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "seeking_advice",
+          "sharing_learning",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "atproto",
+          "productivity",
+          "distributed systems",
+          "network architecture",
+          "scalability"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mppdrvwinv2e",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3mppdrvwinv2e",
+            "text": "Daniel's permissioned data proposal just dropped!!\n\nThis will be a major upgrade for atproto that enables private groups & communities. Really hope this technical design resonates with people so we can keep moving fast, but please do get your comments in",
+            "createdAt": "2026-07-03T00:59:27.803Z",
+            "authorHandle": "pfrazee.com"
+          },
+          "signals": {
+            "intentSignals": [
+              "launching",
+              "seeking_advice"
+            ],
+            "topics": [
+              "atproto",
+              "private groups",
+              "data proposal"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Private groups and communities are a significant enough priority to warrant a major upgrade to atproto.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "danabra.mov",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/danabra.mov",
+        "displayName": "Dan Abramov"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "launching",
+          "seeking_advice",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "nextjs",
+          "atproto",
+          "programming",
+          "linguistics",
+          "product launch"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:fpruhuo22xkm5o7ttr2ktxdo/app.bsky.feed.post/3mpkdwh7xpc26",
+            "url": "https://bsky.app/profile/danabra.mov/post/3mpkdwh7xpc26",
+            "text": "hey @awarm.space! as i’m ramping up on @nextjs.org team i’d love to hear what sucks about it for @leaflet.pub. like both on a grand scale and concrete small things that annoy day to day",
+            "createdAt": "2026-07-01T01:18:41.463Z",
+            "authorHandle": "danabra.mov"
+          },
+          "signals": {
+            "intentSignals": [
+              "seeking_advice",
+              "tool_complaint"
+            ],
+            "topics": [
+              "nextjs",
+              "frontend development",
+              "leaflet"
+            ],
+            "tone": "analytical"
+          }
+        }
+      },
+      "snippet": "Asking for feedback on what sucks about Next.js implies you're looking for unvarnished truth from someone who's used it.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "bnewbold.net",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/bnewbold.net",
+        "displayName": "Bryan Newbold"
+      },
+      "postsFetched": 6,
+      "postsExtracted": 6,
+      "aggregated": {
+        "topSignals": [],
+        "topTopics": [
+          "atp",
+          "ietf",
+          "working group",
+          "zombie genre",
+          "film review"
+        ],
+        "dominantTone": "neutral",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mpotl7h3wk24",
+            "url": "https://bsky.app/profile/bnewbold.net/post/3mpotl7h3wk24",
+            "text": "reminder that the inaugural ATP (atproto) working group meeting will be taking place soon! we are scheduled for the Thursday of #IETF126.\n\nyou can register and participate remotely.\n\nif you have a topic you want to discuss, reply to the chairs on the mailing list; this is roughly final call",
+            "createdAt": "2026-07-02T20:09:23.035Z",
+            "authorHandle": "bnewbold.net"
+          },
+          "signals": {
+            "intentSignals": [
+              "none"
+            ],
+            "topics": [
+              "atp",
+              "ietf",
+              "working group"
+            ],
+            "tone": "neutral"
+          }
+        }
+      },
+      "snippet": "Organizing a working group meeting on short notice implies a high level of momentum behind atproto.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "why.bsky.team",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/why.bsky.team",
+        "displayName": "Aaron Rodericks"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "sharing_learning",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "ai",
+          "system design",
+          "resilience",
+          "team_management",
+          "atproto"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:vpkhqolt662uhesyj6nxm7ys/app.bsky.feed.post/3mps3thvyq22m",
+            "url": "https://bsky.app/profile/why.bsky.team/post/3mps3thvyq22m",
+            "text": "You should be designing your entire system to be resilient to random engineers pushing horribly broken things. Design around potential issues, don’t just hope they never hit you.",
+            "createdAt": "2026-07-04T03:15:09.497Z",
+            "authorHandle": "why.bsky.team"
+          },
+          "signals": {
+            "intentSignals": [
+              "sharing_learning"
+            ],
+            "topics": [
+              "system design",
+              "resilience"
+            ],
+            "tone": "analytical"
+          }
+        }
+      },
+      "snippet": "Designing entire systems around potential issues implies a low tolerance for avoidable failures.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "ada_founder",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/ada_founder",
+        "displayName": "Ada Reyes"
+      },
+      "postsFetched": 4,
+      "postsExtracted": 4,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "hiring",
+          "fundraising"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "entrepreneurship",
+          "book review",
+          "ai",
+          "b2b saas"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "1789012345678901234",
+            "url": "https://twitter.com/ada_founder/status/1789012345678901234",
+            "text": "We just closed our seed round. $4.2M led by Initialized with participation from a bunch of operators we've been learning from for years. Wild day. Now the actual work starts.",
+            "createdAt": "2026-05-19T15:42:00Z",
+            "authorHandle": "ada_founder"
+          },
+          "signals": {
+            "intentSignals": [
+              "fundraising"
+            ],
+            "topics": [
+              "venture capital",
+              "seed round"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Raising a seed round with operators who are also mentors implies a strong desire for guidance alongside capital.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "marcus_builds",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/marcus_builds",
+        "displayName": "Marcus Okafor"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "seeking_advice",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales tools",
+          "customer acquisition",
+          "growth hacking",
+          "devops"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "1789022345678901236",
+            "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
+            "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
+            "createdAt": "2026-05-23T11:48:00Z",
+            "authorHandle": "marcus_builds"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint",
+              "seeking_advice"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Having to DIY outbound with just a Postgres connection implies the current tools aren't built for solo founders.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "priya_ships",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/priya_ships",
+        "displayName": "Priya Shah"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "hiring",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales hiring",
+          "infrastructure",
+          "sales tools"
+        ],
+        "dominantTone": "neutral",
+        "anchor": {
+          "post": {
+            "id": "1789032345678901234",
+            "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+            "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+            "createdAt": "2026-05-15T18:22:00Z",
+            "authorHandle": "priya_ships"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Evaluating six tools in two weeks implies the current options aren't meeting a basic threshold for quality or value.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "jordan-chen",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/jordan-chen",
+        "displayName": "Jordan Chen"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "launching",
+          "sharing_learning",
+          "hiring"
+        ],
+        "topTopics": [
+          "financial software",
+          "accounting automation",
+          "customer_support",
+          "growth_strategy",
+          "sales hiring"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "li-7298765432109876544",
+            "url": "https://www.linkedin.com/posts/jordan-chen-activity-7298765432109876544",
+            "text": "Hiring two more engineers and our first Head of Sales. Series A closed last month, team is doubling, the only thing holding us back from a real GTM motion is the GTM hire. If you know someone strong, please introduce us.",
+            "createdAt": "2026-05-20T09:30:00Z",
+            "authorHandle": "jordan-chen"
+          },
+          "signals": {
+            "intentSignals": [
+              "hiring",
+              "fundraising"
+            ],
+            "topics": [
+              "sales hiring",
+              "series a",
+              "gtm"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Doubling the team and waiting on a single GTM hire implies that role is make-or-break for the next phase.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "sam-rivers",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/sam-rivers",
+        "displayName": "Sam Rivers"
+      },
+      "postsFetched": 2,
+      "postsExtracted": 2,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "enterprise sales",
+          "prospect research",
+          "personalization"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "li-7298775432109876544",
+            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876544",
+            "text": "Closed our second enterprise contract this month. Both deals came from outbound — both required four months of nurture. Anyone telling you outbound is dead is selling something. It works. It just takes patience and craft.",
+            "createdAt": "2026-05-21T11:00:00Z",
+            "authorHandle": "sam-rivers"
+          },
+          "signals": {
+            "intentSignals": [
+              "celebrating_win"
+            ],
+            "topics": [
+              "outbound sales",
+              "enterprise sales"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Four months of nurture for each deal implies a deliberate approach to outbound.",
+      "error": null
+    }
+  ]
+}
