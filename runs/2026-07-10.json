@@ -1,0 +1,409 @@
+{
+  "generatedAt": "2026-07-10T15:36:24.089Z",
+  "model": "llama-3.3-70b-versatile",
+  "results": [
+    {
+      "prospect": {
+        "handle": "pfrazee.com",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/pfrazee.com",
+        "displayName": "Paul Frazee"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [],
+        "topTopics": [
+          "jevons paradox",
+          "software development",
+          "code review",
+          "programming languages",
+          "rust"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mq3nyxbf222j",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3mq3nyxbf222j",
+            "text": "In the Bible, the punishment was to create more languages. This time around the punishment will be reversed and we’ll all end up writing rust",
+            "createdAt": "2026-07-07T22:34:18.366Z",
+            "authorHandle": "pfrazee.com"
+          },
+          "signals": {
+            "intentSignals": [
+              "none"
+            ],
+            "topics": [
+              "programming languages",
+              "rust"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Joking about a punishment that reverses the tower of Babel implies a deep-seated frustration with programming language fragmentation.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "danabra.mov",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/danabra.mov",
+        "displayName": "Dan Abramov"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "atproto",
+          "ai writing",
+          "ux design",
+          "product feedback",
+          "podcast appearance"
+        ],
+        "dominantTone": "frustrated",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:fpruhuo22xkm5o7ttr2ktxdo/app.bsky.feed.post/3mpyd3esthc2m",
+            "url": "https://bsky.app/profile/danabra.mov/post/3mpyd3esthc2m",
+            "text": "man i just can’t with the claude-written announcements. you made an interesting thing, why not describe it in your own words?\n\n“but here’s the biggest unlock, and it’s the part that’s hardest to see”\n\ni already read this all day",
+            "createdAt": "2026-07-06T14:40:49.303Z",
+            "authorHandle": "danabra.mov"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "ai writing",
+              "content creation"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Frustration with AI-generated content implies a high bar for authenticity in the messages you receive.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "bnewbold.net",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/bnewbold.net",
+        "displayName": "Bryan Newbold"
+      },
+      "postsFetched": 5,
+      "postsExtracted": 5,
+      "aggregated": {
+        "topSignals": [],
+        "topTopics": [
+          "self_improvement",
+          "reading",
+          "wellness",
+          "atp",
+          "ietf"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mqaibr7ebc24",
+            "url": "https://bsky.app/profile/bnewbold.net/post/3mqaibr7ebc24",
+            "text": "scintillating sabbatical adventures have included:\n\n- flossing every day\n- sleeping 8-9 hours a night\n- eating lots of cucumbers\n- no social media on my phone\n- reading thousands of pages about LBJ\n- attacking rat burrows in side yard",
+            "createdAt": "2026-07-09T20:35:10.241Z",
+            "authorHandle": "bnewbold.net"
+          },
+          "signals": {
+            "intentSignals": [
+              "none"
+            ],
+            "topics": [
+              "self_improvement",
+              "reading",
+              "wellness"
+            ],
+            "tone": "reflective"
+          }
+        }
+      },
+      "snippet": "Trading social media for thousands of pages about LBJ implies a deliberate shift in how you're choosing to spend your attention.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "why.bsky.team",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/why.bsky.team",
+        "displayName": "Aaron Rodericks"
+      },
+      "postsFetched": 10,
+      "postsExtracted": 10,
+      "aggregated": {
+        "topSignals": [
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "memory",
+          "personal life",
+          "ai development",
+          "unit testing",
+          "coding harness"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:vpkhqolt662uhesyj6nxm7ys/app.bsky.feed.post/3mps3thvyq22m",
+            "url": "https://bsky.app/profile/why.bsky.team/post/3mps3thvyq22m",
+            "text": "You should be designing your entire system to be resilient to random engineers pushing horribly broken things. Design around potential issues, don’t just hope they never hit you.",
+            "createdAt": "2026-07-04T03:15:09.497Z",
+            "authorHandle": "why.bsky.team"
+          },
+          "signals": {
+            "intentSignals": [
+              "sharing_learning"
+            ],
+            "topics": [
+              "system design",
+              "devops",
+              "resilience"
+            ],
+            "tone": "analytical"
+          }
+        }
+      },
+      "snippet": "Designing systems to withstand badly broken changes implies a history of painful recoveries.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "ada_founder",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/ada_founder",
+        "displayName": "Ada Reyes"
+      },
+      "postsFetched": 4,
+      "postsExtracted": 4,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "hiring",
+          "fundraising"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "customer_validation",
+          "book_review",
+          "ai",
+          "b2b saas"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "1789012345678901234",
+            "url": "https://twitter.com/ada_founder/status/1789012345678901234",
+            "text": "We just closed our seed round. $4.2M led by Initialized with participation from a bunch of operators we've been learning from for years. Wild day. Now the actual work starts.",
+            "createdAt": "2026-05-19T15:42:00Z",
+            "authorHandle": "ada_founder"
+          },
+          "signals": {
+            "intentSignals": [
+              "fundraising"
+            ],
+            "topics": [
+              "fundraising",
+              "venture capital"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Raising a seed round with operators who are also mentors implies a desire for guidance beyond just capital.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "marcus_builds",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/marcus_builds",
+        "displayName": "Marcus Okafor"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "seeking_advice",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales tools",
+          "customer acquisition",
+          "growth hacking",
+          "devops"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "1789022345678901236",
+            "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
+            "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
+            "createdAt": "2026-05-23T11:48:00Z",
+            "authorHandle": "marcus_builds"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint",
+              "seeking_advice"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Having to DIY outbound sales with just a Postgres connection implies the usual tools aren't built for solo founders.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "priya_ships",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/priya_ships",
+        "displayName": "Priya Shah"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "hiring",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales hiring",
+          "infrastructure",
+          "sales tools"
+        ],
+        "dominantTone": "neutral",
+        "anchor": {
+          "post": {
+            "id": "1789032345678901234",
+            "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+            "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+            "createdAt": "2026-05-15T18:22:00Z",
+            "authorHandle": "priya_ships"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Evaluating six tools in two weeks implies the current solutions are failing a basic quality test.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "jordan-chen",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/jordan-chen",
+        "displayName": "Jordan Chen"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "launching",
+          "sharing_learning",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "financial software",
+          "accounting",
+          "customer_support",
+          "growth_strategy",
+          "sales hiring"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "li-7298765432109876544",
+            "url": "https://www.linkedin.com/posts/jordan-chen-activity-7298765432109876544",
+            "text": "Hiring two more engineers and our first Head of Sales. Series A closed last month, team is doubling, the only thing holding us back from a real GTM motion is the GTM hire. If you know someone strong, please introduce us.",
+            "createdAt": "2026-05-20T09:30:00Z",
+            "authorHandle": "jordan-chen"
+          },
+          "signals": {
+            "intentSignals": [
+              "hiring",
+              "fundraising"
+            ],
+            "topics": [
+              "sales hiring",
+              "series a"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Doubling the team after a Series A close implies that scaling sales and engineering in tandem is a deliberate growth strategy.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "sam-rivers",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/sam-rivers",
+        "displayName": "Sam Rivers"
+      },
+      "postsFetched": 2,
+      "postsExtracted": 2,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "enterprise contracts",
+          "prospect research",
+          "personalization"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "li-7298775432109876544",
+            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876544",
+            "text": "Closed our second enterprise contract this month. Both deals came from outbound — both required four months of nurture. Anyone telling you outbound is dead is selling something. It works. It just takes patience and craft.",
+            "createdAt": "2026-05-21T11:00:00Z",
+            "authorHandle": "sam-rivers"
+          },
+          "signals": {
+            "intentSignals": [
+              "celebrating_win"
+            ],
+            "topics": [
+              "outbound sales",
+              "enterprise contracts"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Four months of nurture for each of two enterprise deals implies that patience is a competitive advantage in outbound sales.",
+      "error": null
+    }
+  ]
+}
