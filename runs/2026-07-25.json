@@ -1,0 +1,377 @@
+{
+  "generatedAt": "2026-07-25T14:41:11.290Z",
+  "model": "llama-3.3-70b-versatile",
+  "results": [
+    {
+      "prospect": {
+        "handle": "pfrazee.com",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/pfrazee.com",
+        "displayName": "Paul Frazee"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "seeking_advice",
+          "launching",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "pop culture",
+          "movies",
+          "mobile app",
+          "react native",
+          "seattle tech week"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3mrg5dxy6xc2c",
+            "url": "https://bsky.app/profile/pfrazee.com/post/3mrg5dxy6xc2c",
+            "text": "Assuming we don't hit any showstopper bugs, mobile users are about to be a whoooole lot happier with the app. The React Native contributors did an amazing job with this and the performance difference is super tangible",
+            "createdAt": "2026-07-24T20:00:43.354Z",
+            "authorHandle": "pfrazee.com"
+          },
+          "signals": {
+            "intentSignals": [
+              "launching"
+            ],
+            "topics": [
+              "mobile app",
+              "react native"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "React Native contributions making a tangible performance difference implies the app's previous mobile experience was a major pain point.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "danabra.mov",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/danabra.mov",
+        "displayName": "Dan Abramov"
+      },
+      "postsFetched": 12,
+      "postsExtracted": 12,
+      "aggregated": {
+        "topSignals": [
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "ai",
+          "philosophy",
+          "nextjs",
+          "prefetching",
+          "spa"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:fpruhuo22xkm5o7ttr2ktxdo/app.bsky.feed.post/3mr7aewdh522o",
+            "url": "https://bsky.app/profile/danabra.mov/post/3mr7aewdh522o",
+            "text": "some evidence that AI can be helpful in explaining AI findings terrytao.wordpress.com/2026/07/21/a...",
+            "createdAt": "2026-07-22T02:06:18.237Z",
+            "authorHandle": "danabra.mov"
+          },
+          "signals": {
+            "intentSignals": [
+              "sharing_learning"
+            ],
+            "topics": [
+              "ai",
+              "explainability"
+            ],
+            "tone": "analytical"
+          }
+        }
+      },
+      "snippet": "Sharing a link to Terry Tao's blog on AI explaining AI findings implies you're interested in the meta-level discussions around artificial intelligence.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "bnewbold.net",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/bnewbold.net",
+        "displayName": "Bryan Newbold"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [],
+        "topTopics": [
+          "data uri",
+          "permissioned data"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "at://did:plc:44ybard66vv44zksje25o7dz/app.bsky.feed.post/3mqsxdubkyk2q",
+            "url": "https://bsky.app/profile/bnewbold.net/post/3mqsxdubkyk2q",
+            "text": "two years ago today, @dholms.at riffing on group permissioned data URI schemes",
+            "createdAt": "2026-07-17T04:52:41.984Z",
+            "authorHandle": "bnewbold.net"
+          },
+          "signals": {
+            "intentSignals": [
+              "none"
+            ],
+            "topics": [
+              "data uri",
+              "permissioned data"
+            ],
+            "tone": "reflective"
+          }
+        }
+      },
+      "snippet": "Marking the anniversary of a conversation about group permissioned data URI schemes implies it's a topic that's still on your mind.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "why.bsky.team",
+        "platform": "bluesky",
+        "profileUrl": "https://bsky.app/profile/why.bsky.team",
+        "displayName": "Aaron Rodericks"
+      },
+      "postsFetched": 0,
+      "postsExtracted": 0,
+      "aggregated": null,
+      "snippet": null,
+      "error": "Bluesky API 400 for why.bsky.team: {\"error\":\"InvalidRequest\",\"message\":\"Profile not found\"}"
+    },
+    {
+      "prospect": {
+        "handle": "ada_founder",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/ada_founder",
+        "displayName": "Ada Reyes"
+      },
+      "postsFetched": 4,
+      "postsExtracted": 4,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "hiring",
+          "fundraising"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "customer_validation",
+          "book_review",
+          "ai",
+          "b2b saas"
+        ],
+        "dominantTone": "reflective",
+        "anchor": {
+          "post": {
+            "id": "1789012345678901234",
+            "url": "https://twitter.com/ada_founder/status/1789012345678901234",
+            "text": "We just closed our seed round. $4.2M led by Initialized with participation from a bunch of operators we've been learning from for years. Wild day. Now the actual work starts.",
+            "createdAt": "2026-05-19T15:42:00Z",
+            "authorHandle": "ada_founder"
+          },
+          "signals": {
+            "intentSignals": [
+              "fundraising"
+            ],
+            "topics": [
+              "fundraising",
+              "venture capital"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Closing a seed round with investors you've learned from implies a deliberate choice of mentors over just capital.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "marcus_builds",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/marcus_builds",
+        "displayName": "Marcus Okafor"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "tool_complaint",
+          "seeking_advice",
+          "celebrating_win"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales tools",
+          "customer acquisition",
+          "growth hacking",
+          "devops"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "1789022345678901236",
+            "url": "https://twitter.com/marcus_builds/status/1789022345678901236",
+            "text": "Trying to figure out how to do outbound now that we have something to sell. Every tool I look at assumes I have a SDR team. I don't. I have me and a Postgres connection.",
+            "createdAt": "2026-05-23T11:48:00Z",
+            "authorHandle": "marcus_builds"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint",
+              "seeking_advice"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Having to build an outbound process from scratch with no SDR team implies the current tools aren't designed for solo founders.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "priya_ships",
+        "platform": "twitter",
+        "profileUrl": "https://twitter.com/priya_ships",
+        "displayName": "Priya Shah"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "hiring",
+          "tool_complaint"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "sales hiring",
+          "infrastructure",
+          "sales tools"
+        ],
+        "dominantTone": "neutral",
+        "anchor": {
+          "post": {
+            "id": "1789032345678901234",
+            "url": "https://twitter.com/priya_ships/status/1789032345678901234",
+            "text": "Real talk: I have spent the last two weeks evaluating six outbound tools. All of them want $800/month and produce emails that sound like they were written by a LinkedIn influencer's intern. We need better.",
+            "createdAt": "2026-05-15T18:22:00Z",
+            "authorHandle": "priya_ships"
+          },
+          "signals": {
+            "intentSignals": [
+              "tool_complaint"
+            ],
+            "topics": [
+              "outbound sales",
+              "sales tools"
+            ],
+            "tone": "frustrated"
+          }
+        }
+      },
+      "snippet": "Evaluating six tools in two weeks implies the current solutions are interchangeable to you.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "jordan-chen",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/jordan-chen",
+        "displayName": "Jordan Chen"
+      },
+      "postsFetched": 3,
+      "postsExtracted": 3,
+      "aggregated": {
+        "topSignals": [
+          "launching",
+          "sharing_learning",
+          "hiring"
+        ],
+        "topTopics": [
+          "financial software",
+          "accounting",
+          "customer_support",
+          "growth_strategy",
+          "sales hiring"
+        ],
+        "dominantTone": "excited",
+        "anchor": {
+          "post": {
+            "id": "li-7298765432109876544",
+            "url": "https://www.linkedin.com/posts/jordan-chen-activity-7298765432109876544",
+            "text": "Hiring two more engineers and our first Head of Sales. Series A closed last month, team is doubling, the only thing holding us back from a real GTM motion is the GTM hire. If you know someone strong, please introduce us.",
+            "createdAt": "2026-05-20T09:30:00Z",
+            "authorHandle": "jordan-chen"
+          },
+          "signals": {
+            "intentSignals": [
+              "hiring",
+              "fundraising"
+            ],
+            "topics": [
+              "sales hiring",
+              "series a",
+              "gtm"
+            ],
+            "tone": "excited"
+          }
+        }
+      },
+      "snippet": "Doubling the team and still waiting on a single GTM hire implies the bottleneck is finding the right sales leader.",
+      "error": null
+    },
+    {
+      "prospect": {
+        "handle": "sam-rivers",
+        "platform": "linkedin",
+        "profileUrl": "https://www.linkedin.com/in/sam-rivers",
+        "displayName": "Sam Rivers"
+      },
+      "postsFetched": 2,
+      "postsExtracted": 2,
+      "aggregated": {
+        "topSignals": [
+          "celebrating_win",
+          "sharing_learning"
+        ],
+        "topTopics": [
+          "outbound sales",
+          "enterprise contracts",
+          "prospect research",
+          "personalization"
+        ],
+        "dominantTone": "celebratory",
+        "anchor": {
+          "post": {
+            "id": "li-7298775432109876544",
+            "url": "https://www.linkedin.com/posts/sam-rivers-activity-7298775432109876544",
+            "text": "Closed our second enterprise contract this month. Both deals came from outbound — both required four months of nurture. Anyone telling you outbound is dead is selling something. It works. It just takes patience and craft.",
+            "createdAt": "2026-05-21T11:00:00Z",
+            "authorHandle": "sam-rivers"
+          },
+          "signals": {
+            "intentSignals": [
+              "celebrating_win"
+            ],
+            "topics": [
+              "outbound sales",
+              "enterprise contracts"
+            ],
+            "tone": "celebratory"
+          }
+        }
+      },
+      "snippet": "Four months of nurture for each deal implies that the conversations you're starting with outbound are fragile and need careful handling.",
+      "error": null
+    }
+  ]
+}
