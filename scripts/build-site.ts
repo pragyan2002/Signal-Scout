@@ -46,12 +46,9 @@ async function readRuns(): Promise<RunFile[]> {
   return runs;
 }
 
-async function readProse(): Promise<{ pitch: string; icp: string }> {
-  const [pitch, icp] = await Promise.all([
-    readFile(join(CONFIG_DIR, 'pitch.md'), 'utf8').catch(() => ''),
-    readFile(join(CONFIG_DIR, 'icp.md'), 'utf8').catch(() => ''),
-  ]);
-  return { pitch, icp };
+async function readProse(): Promise<{ icp: string }> {
+  const icp = await readFile(join(CONFIG_DIR, 'icp.md'), 'utf8').catch(() => '');
+  return { icp };
 }
 
 const STYLES = `
@@ -68,6 +65,7 @@ const STYLES = `
   --linkedin: #0a66c2;
   --bluesky: #1185fe;
   --good: #3fb950;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
@@ -94,10 +92,8 @@ a:hover { text-decoration: underline; }
 /* Controls */
 .controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 32px 0 10px; }
 .controls h2 { font-size: 15px; color: var(--muted); font-weight: 600; margin: 0; text-transform: uppercase; letter-spacing: .04em; }
-.timeline { display: flex; gap: 6px; flex-wrap: wrap; }
-.tl-btn { background: var(--panel); border: 1px solid var(--border); color: var(--muted); border-radius: 8px; padding: 6px 11px; font-size: 13px; cursor: pointer; font-variant-numeric: tabular-nums; }
-.tl-btn:hover { border-color: var(--accent); color: var(--text); }
-.tl-btn.active { background: var(--accent); border-color: var(--accent); color: #08111f; font-weight: 600; }
+.run-select { background: var(--panel); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 7px 34px 7px 12px; font-size: 13px; cursor: pointer; font-variant-numeric: tabular-nums; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238b98a5' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+.run-select:hover, .run-select:focus { border-color: var(--accent); outline: none; }
 
 /* Summary */
 .summary { display: flex; gap: 14px; flex-wrap: wrap; margin: 6px 0 26px; color: var(--muted); font-size: 13px; }
@@ -161,13 +157,15 @@ const CLIENT_JS = [
   "  function initials(name, handle){ var s = (name||handle||'?').trim(); var p = s.split(/\\s+/); return ((p[0]||'?')[0] + (p.length>1?(p[1][0]||''):'')).toUpperCase(); }",
   "  function fmtDate(iso){ try { return new Date(iso).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'}); } catch(e){ return iso; } }",
   '',
-  '  function buildTimeline(){',
-  "    var tl = document.getElementById('timeline'); tl.innerHTML = '';",
-  '    runs.forEach(function(r, i){',
-  "      var b = el('button', 'tl-btn' + (i===current?' active':''), esc(r.date));",
-  '      b.onclick = function(){ current = i; render(); };',
-  '      tl.appendChild(b);',
-  '    });',
+  '  function buildRunSelect(){',
+  "    var sel = document.getElementById('run-select'); sel.innerHTML = '';",
+  '    for (var i = runs.length - 1; i >= 0; i--) {',
+  "      var o = document.createElement('option');",
+  '      o.value = String(i); o.textContent = runs[i].date;',
+  '      sel.appendChild(o);',
+  '    }',
+  '    sel.value = String(current);',
+  '    sel.onchange = function(){ current = parseInt(sel.value, 10); render(); };',
   '  }',
   '',
   '  function avatar(p){',
@@ -224,7 +222,6 @@ const CLIENT_JS = [
   '  }',
   '',
   '  function render(){',
-  '    buildTimeline();',
   '    var run = runs[current]; if(!run){ return; }',
   '    var PLAT_ORDER = { bluesky: 0, twitter: 1, linkedin: 2 };',
   '    function platRank(r){ var v = r.prospect && PLAT_ORDER[r.prospect.platform]; return v==null ? 9 : v; }',
@@ -245,6 +242,7 @@ const CLIENT_JS = [
   "    f.textContent = 'Run ' + run.date + ' · generated ' + fmtDate(run.generatedAt) + ' · model ' + run.model;",
   '  }',
   '',
+  '  buildRunSelect();',
   '  render();',
   '})();',
 ].join('\n');
@@ -266,10 +264,9 @@ function mdToHtml(md: string): string {
     .join('\n');
 }
 
-function page(siteData: object, prose: { pitch: string; icp: string }): string {
+function page(siteData: object, prose: { icp: string }): string {
   // Escape "<" inside the embedded JSON to prevent </script> breakout / XSS.
   const dataJson = JSON.stringify(siteData).replace(/</g, '\\u003c');
-  const aboutPitch = mdToHtml(prose.pitch);
   const aboutIcp = mdToHtml(prose.icp);
   return `<!doctype html>
 <html lang="en">
@@ -295,16 +292,14 @@ function page(siteData: object, prose: { pitch: string; icp: string }): string {
 
   <div class="controls">
     <h2>Run history</h2>
-    <div class="timeline" id="timeline"></div>
+    <select class="run-select" id="run-select" aria-label="Filter by run date"></select>
   </div>
   <div class="summary" id="summary"></div>
 
   <div class="grid" id="grid"></div>
 
   <section class="about">
-    <h3>What this is</h3>
-    ${aboutPitch}
-    <h3 style="margin-top:22px">Who it's for</h3>
+    <h3>Who it's for</h3>
     ${aboutIcp}
   </section>
 
